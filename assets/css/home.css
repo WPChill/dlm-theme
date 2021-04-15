@@ -1,0 +1,91 @@
+.home-intro {
+  padding-top: 3em;
+  overflow: hidden;
+}
+.home-intro h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+.home-intro p {
+  font-size: 1em;
+  text-align: center;
+}
+.home-buttons {
+  text-align: center;
+  overflow: hidden;
+}
+.home-buttons a:first-child {
+  margin-bottom: 20px;
+}
+.home-feature-icons {
+  padding: 50px 0 25px;
+  overflow: hidden;
+}
+.home-feature-icons ul {
+  margin: 0;
+  clear: both;
+  float: left;
+}
+.home-feature-icons ul li {
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+  list-style: none outside;
+}
+.home-feature-icons ul li i {
+  font-size: 4em;
+}
+.home-feature-icons ul li p {
+  padding-top: 20px;
+}
+.home-features .goal,
+.home-features .final {
+  text-align: center;
+}
+.feature {
+  width: 100%;
+  overflow: hidden;
+  padding: 25px 0;
+}
+.feature img {
+  width: 100%;
+  margin-bottom: 15px;
+  float: left;
+}
+.feature .description {
+  width: 100%;
+  text-align: center;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.site .home-featured-extensions-wrap {
+  background: #f3f3f3;
+  padding: 2em 0;
+  margin-bottom: 2.5em;
+}
+.home-featured-extensions .products .product {
+  width: 23.5% !important;
+  margin-right: 2% !important;
+  margin-bottom: 0 !important;
+  min-height: 280px !important;
+  background: #fff;
+}
+.home-featured-extensions .products .product h3 {
+  font-size: 1.25em;
+}
+.home-featured-extensions .products .product:last-child {
+  margin-right: 0 !important;
+}
+.home-featured-extensions .home-featured-show-all {
+  text-align: center;
+  margin-bottom: 0;
+}
+.home .site-footer {
+  margin-top: 1em;
+}

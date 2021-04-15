@@ -1,0 +1,158 @@
+.single-wpkb-article .woocommerce-breadcrumb,
+.tax-wpkb-category .woocommerce-breadcrumb {
+  margin-bottom: 3em;
+}
+.single-wpkb-article .wpkb-callout,
+.tax-wpkb-category .wpkb-callout {
+  margin: 0 0 1.618em;
+}
+.single-wpkb-article table tbody td,
+.tax-wpkb-category table tbody td {
+  background: none;
+}
+.single-wpkb-article .entry-content ul,
+.tax-wpkb-category .entry-content ul {
+  margin-left: 1em;
+}
+.single-wpkb-article #documentation-sidebar,
+.tax-wpkb-category #documentation-sidebar {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.single-wpkb-article #documentation-sidebar .sidebar-doc-block,
+.tax-wpkb-category #documentation-sidebar .sidebar-doc-block {
+  margin: 0 0 40px;
+}
+.single-wpkb-article #documentation-sidebar .sidebar-doc-block ul,
+.tax-wpkb-category #documentation-sidebar .sidebar-doc-block ul {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #f3f3f3;
+}
+.single-wpkb-article #documentation-sidebar .sidebar-doc-block ul li,
+.tax-wpkb-category #documentation-sidebar .sidebar-doc-block ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 7px 0;
+  margin: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.single-wpkb-article #documentation-sidebar .sidebar-doc-block .wpkb-woocommerce-product-button,
+.tax-wpkb-category #documentation-sidebar .sidebar-doc-block .wpkb-woocommerce-product-button {
+  width: 90%;
+  text-align: center;
+}
+.single-wpkb-article #documentation-sidebar .doc-buttons,
+.tax-wpkb-category #documentation-sidebar .doc-buttons {
+  padding: 10px 0;
+}
+.single-wpkb-article #documentation-sidebar .doc-buttons a,
+.tax-wpkb-category #documentation-sidebar .doc-buttons a {
+  display: block;
+  width: 85%;
+  text-align: center;
+}
+.single-wpkb-article #primary,
+.tax-wpkb-category #primary {
+  padding-left: 30px;
+}
+.single-wpkb-article #primary figure.wp-caption,
+.tax-wpkb-category #primary figure.wp-caption {
+  padding: 10px;
+  text-align: center;
+  background: #f1f1f1;
+}
+.single-wpkb-article #primary figure.wp-caption .wp-caption-text,
+.tax-wpkb-category #primary figure.wp-caption .wp-caption-text {
+  text-align: center;
+  border: 0;
+}
+.single-wpkb-article #primary .wpkb-rating,
+.tax-wpkb-category #primary .wpkb-rating {
+  border-top: 1px solid #efefef;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 90%;
+  font-style: italic;
+}
+.single-wpkb-article #primary .wpkb-rating a,
+.tax-wpkb-category #primary .wpkb-rating a {
+  font-weight: normal;
+}
+.single-wpkb-article .wpkb-search-button,
+.tax-wpkb-category .wpkb-search-button {
+  display: none;
+}
+.single-wpkb-article .category-overview ul,
+.tax-wpkb-category .category-overview ul {
+  margin: 0 0 0 17px;
+  list-style: square;
+}
+.page .wpkb-search {
+  padding: 20px;
+  border: 1px solid #efefef;
+  overflow: hidden;
+}
+.page .wpkb-search form p {
+  overflow: hidden;
+}
+.page .wpkb-search form p span.wpkb-search-input {
+  display: block;
+  width: 85%;
+  float: left;
+}
+.page .wpkb-search form p span.wpkb-search-input input {
+  width: 100%;
+}
+.page .wpkb-search form p span.wpkb-search-button {
+  display: block;
+  width: 15%;
+  float: left;
+}
+.page .wpkb-search form p span.wpkb-search-button input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-shadow: none;
+  border: 1px solid #dbdbdb;
+  border-left: 0;
+}
+.page .wpkb-search .wpkb-search-results {
+  width: 100%;
+  float: left;
+}
+.page .wpkb-search .wpkb-search-results p {
+  margin: 0;
+}
+.page .wpkb-list {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #efefef;
+}
+.page .wpkb-list .wpkb-list-title {
+  font-size: 20px;
+  margin: 0;
+  background: #f3f3f3;
+  padding: 15px 20px;
+}
+.page .wpkb-list .wpkb-list-content {
+  padding: 20px;
+}
+.page .wpkb-list .wpkb-list-content ul {
+  margin: 0;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.page .wpkb-list .wpkb-list-content ul li {
+  width: 49.5%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: square;
+}
+.page .wpkb-list .wpkb-list-content ul li.wpkb-even {
+  margin-right: 1%;
+}

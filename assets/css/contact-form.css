@@ -1,0 +1,50 @@
+.hf-form p {
+  padding: 5px 0;
+  float: left;
+  width: 100%;
+}
+.hf-form label {
+  display: block;
+  cursor: pointer;
+  padding: 0 0 10px;
+}
+.hf-form .hf-fields-wrap {
+  display: block;
+  padding: 10px 0 0;
+}
+.hf-form .hf-text {
+  width: 100%;
+  padding: .857em;
+  background: #efefef;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}
+.hf-form select {
+  width: 100%;
+  height: 45px;
+  background: #efefef;
+}
+.hf-form textarea {
+  width: 100%;
+  height: 200px;
+}
+.hf-form .hf-consent {
+  font-size: .8em;
+  font-weight: normal;
+}
+.hf-form .hf-consent span {
+  font-weight: normal;
+}
+.hf-form .hf-submit {
+  height: 45px;
+  padding: 0 25px;
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}

@@ -1,0 +1,13 @@
+/*
+ Theme Name:   DLM
+ Theme URI:    http://www.download-monitor.com/
+ Description:  Download Monitor Theme based on StoreFront.
+ Author:       Barry Kooij
+ Author URI:   http://barrykooij.com
+ Template:     storefront
+ Version:      1.0.0
+ Tags:         wow, much, very, so, stahp
+ Text Domain:  storefront
+*/
+@import url("../storefront/style.css");
+@import url("assets/css/checkout.css");
