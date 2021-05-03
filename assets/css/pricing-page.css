@@ -1,0 +1,351 @@
+/** Pricing Page **/
+
+.page-template-template-pricing-page .site-header,
+.page-template-template-pricing-page .storefront-breadcrumb {
+    display: none;
+}
+
+.page-template-template-pricing-page {
+    background-color: #FAFAFA;
+}
+
+.page-template-template-pricing-page .button--xl {
+    padding: 25px 40px;
+    margin-top: 20px;
+}
+
+.page-template-template-pricing-page .pricing-title-section .justify-content-center {
+    text-align: center;
+}
+
+.page-template-template-pricing-page .pricing-title-section .pricing-header {
+    display: inline-flex;
+}
+
+.page-template-template-pricing-page .pricing-title-section .pricing-header h1 a {
+    text-decoration: none;
+}
+
+.page-template-template-pricing-page .pricing-title-section .pricing-header h1 a:hover {
+    color: #2c2d33;
+}
+
+.page-template-template-pricing-page .pricing-title-section {
+    margin-top: 20px;
+}
+
+.page-template-template-pricing-page .pricing-title-section h1 {
+    color: #1e242d;
+    font-weight: 700;
+}
+
+.page-template-template-pricing-page .pricing-header img {
+    width: 60px;
+    height: 50px;
+}
+
+.page-template-template-pricing-page .pricing-template-subtitle-section {
+    background-color: #419CCB;
+    padding-bottom: 200px;
+    margin-bottom: -200px;
+}
+.page-template-template-pricing-page .pricing-template-subtitle {
+    text-align: center;
+}
+.page-template-template-pricing-page .pricing-template-subtitle h3 {
+    color: #fff;
+    padding: 70px;
+}
+
+.page-template-template-pricing-page .pricing-table__message {
+    padding: 1rem;
+    background-color: #3e3e3e;
+    color: #FFF;
+    font-weight: 400;
+    max-width: 90%;
+    line-height: 1.15;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.page-template-template-pricing-page .pricing-table-section {
+    position: relative;
+}
+
+.page-template-template-pricing-page .pricing-table__message h6 {
+    color: #FFF;
+}
+
+.page-template-template-pricing-page .pricing-table__title {
+    font-weight: 400;
+    color: #666;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.page-template-template-pricing-page .pricing-table__price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    line-height: 1;
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 1rem;
+}
+
+.page-template-template-pricing-page .pricing-table--header > div:not(:first-child) {
+    text-align: center;
+    border-left: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.page-template-template-pricing-page .pricing-table--header > div:last-child {
+    border-right: 1px solid #ebebeb;
+}
+
+.page-template-template-pricing-page .pricing-table > div {
+    text-align: center;
+    border-left: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+    line-height: 1.5;
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: #fff;
+}
+
+.page-template-template-pricing-page .pricing-table > div:last-child {
+    border-right: 1px solid #ebebeb;
+}
+
+.page-template-template-pricing-page .pricing-table > div:first-child {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.page-template-template-pricing-page .pricing-table > div:nth-child(3), .page-template-template-pricing-page .pricing-table--header > div:nth-child(3) {
+    background: #fefff0;
+}
+
+.page-template-template-pricing-page .pricing-table--header > div:nth-child(3):before {
+    content: 'BEST DEAL';
+    width: calc( 100% + 2px);
+    display: inline-block;
+    opacity: 1;
+    position: absolute;
+    top: -1px;
+    background: #3e3e3e;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 5px;
+    transform: translateY(-100%);
+}
+
+.page-template-template-pricing-page .pricing-table .fa-question-circle {
+    cursor: help;
+    opacity: 0.4;
+}
+
+.page-template-template-pricing-page .pricing-table .fa-check {
+    color: #2b6;
+}
+
+.page-template-template-pricing-page .pricing-message {
+    background: #fff;
+    padding: 55px;
+    margin-bottom: 0;
+    text-align: left;
+    border: 1px solid #ebebeb;
+}
+
+.page-template-template-pricing-page .pricing-message:before {
+    width: 100px;
+    height: 100px;
+    background: url(../images/money-back.png) no-repeat 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    content: '';
+}
+
+.page-template-template-pricing-page .faq-section {
+    margin-top: -5rem;
+    padding: 8.125rem 0 0 0;
+    background: #F3F3F3;
+}
+
+.page-template-template-pricing-page .faq-section .link {
+    text-decoration: none;
+}
+
+.page-template-template-pricing-page .faq-section .link:hover {
+    color: #419CCB;
+}
+
+.page-template-template-pricing-page .faq-section .text-center {
+    margin-bottom: 3rem;
+}
+
+.page-template-template-pricing-page .faq-section .text-center h3, 
+.page-template-template-pricing-page .faq-section .text-center p,
+.page-template-template-pricing-page .testimonials-section-2 .text-center h3, 
+.page-template-template-pricing-page .testimonials-section-2 .text-center p {
+    text-align: center;
+}
+
+.page-template-template-pricing-page .faq-section .card-header {
+    padding: 17px 28px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    width: calc(100% - 51px);
+    border: none;
+    margin-bottom: 3px;
+    background-color: #fff;
+}
+
+.page-template-template-pricing-page .faq-section .card-header:after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: 100%;
+    position: absolute;
+    right: -51px;
+    top: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    content: '';
+    line-height: 60px;
+    background-color: inherit;
+    background-size: 10px;
+    background-image: url('../images/icon-plus.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.page-template-template-pricing-page .faq-section .card-body {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 17px 28px;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.page-template-template-pricing-page .testimonials {
+    padding: 3.75rem 0px;
+    background: #fefefe;
+}
+
+.page-template-template-pricing-page .testimonials .testimonials-title {
+    text-align: center;
+}
+
+.page-template-template-pricing-page .testimonial {
+    border-radius: 8px;
+    margin-top: 30px;
+    background-color: #F3F3F3;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    height: 100%;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.page-template-template-pricing-page .testimonial__content {
+    font-weight: 600;
+    color: #000;
+}
+
+.page-template-template-pricing-page .testimonial .testimonial__stars {
+    width: 94px;
+    height: 20px;
+    background: url(../images/star.png) repeat-x 50% 50%;
+    background-size: 20%;
+}
+.page-template-template-pricing-page .testimonial__author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.page-template-template-pricing-page .testimonial__author img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.page-template-template-pricing-page .testimonial__author .testimonial__name h6 {
+    color: #419CCB;
+    font-weight: 700;
+}
+
+.page-template-template-pricing-page .testimonial__author .testimonial__title {
+    opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+    .page-template-template-pricing-page .pricing-message:before {
+        position: absolute;
+    }
+    .page-template-template-pricing-page .pricing-message .pricing-message__content {
+        padding-left: 190px;
+    }
+}
+@media (max-width: 768px) {
+    .page-template-template-pricing-page .pricing-title-section .pricing-header {
+        display: inline-block;
+    }
+    .page-template-template-pricing-page .pricing-header .dlm-pricing-logo {
+        margin: 0 auto;
+    }
+
+    .page-template-template-pricing-page div.row.pricing-message .pricing-message__content {
+        padding-top: 15px;
+    }
+
+    .page-template-template-pricing-page .pricing-message:before {
+        margin: 0 auto;
+    }
+}
+
+/* FOOTER */
+.page-template-template-pricing-page .dlm-pricing-footer {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    background: #2d3139;
+}
+
+.page-template-template-pricing-page .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.page-template-template-pricing-page .dlm-pricing-footer a {
+    color: rgba(255, 255, 255, 0.7); 
+}

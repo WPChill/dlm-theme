@@ -1,4 +1,5 @@
 <?php
+define('DLM_BUNDLE_ID', 644);
 
 function never5_dir() {
 	return site_url( '/wp-content/never5/' );
@@ -12,11 +13,21 @@ function dlm_assets() {
 	return get_stylesheet_directory_uri() . '/assets';
 }
 
+function dlm_styles() {
+	if (is_page_template('template-pricing-page.php')) {
+		wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
+	}
+}
+add_action('wp_enqueue_scripts', 'dlm_styles');
+
 function dlm_scripts() {
 	wp_dequeue_style( 'storefront-style' );
 	wp_deregister_style( 'storefront-style' );
 	wp_enqueue_style( 'storefront-style', get_stylesheet_directory_uri() . '/assets/css/style.' . ( ( WP_DEBUG ) ? '' : 'min.' ) . 'css', array(), '2.2.0' );
-
+	wp_enqueue_script( 'dlm-sticky-sidebar-js', get_stylesheet_directory_uri() . '/assets/js/sticky-sidebar.js', array( 'jquery' ), true );
+	if (is_page_template('template-pricing-page.php')) {
+		wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array( 'jquery' ) );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'dlm_scripts', 20 );

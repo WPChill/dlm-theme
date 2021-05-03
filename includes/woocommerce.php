@@ -68,13 +68,11 @@ function display_price_in_variation_option_name( $term ) {
 	}
 
 	$lc_term = strtolower( $term );
-
 	$attributes = $product->get_available_variations();
-
 	if ( ! empty ( $attributes ) ) {
 		foreach ( $attributes as $attribute ) {
 			if ( $attribute['attributes']['attribute_pa_license'] == $lc_term ) {
-				return $term . ' - ' . wc_price( $attribute['display_price'] ) . ' / year';
+				return $term . ' - ' . wc_price( $attribute['display_price'] ) . ' / year (' . $attribute['variation_description'] . ')';
 			}
 		}
 
