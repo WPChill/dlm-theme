@@ -44,12 +44,22 @@
     font-size: 20px;
 }
 
+.woocommerce-checkout table.woocommerce-checkout-review-order-table {
+    margin-bottom: 0;
+}
 .woocommerce-checkout #dlm_order_review td.product-name,
-.woocommerce-checkout #dlm_order_review td.product-total {
+.woocommerce-checkout #dlm_order_review td.product-total,
+.woocommerce-checkout tr.cart-subtotal.recurring-total > th,
+.woocommerce-checkout tr.tax-rate.tax-rate-nl-vat-1.recurring-total > th,
+.woocommerce-checkout tr.order-total.recurring-total > th,
+.woocommerce-checkout tr.cart-subtotal.recurring-total > td,
+.woocommerce-checkout tr.tax-rate.tax-rate-nl-vat-1.recurring-total > td,
+.woocommerce-checkout tr.order-total.recurring-total > td {
     background-color: transparent;
     color: #1e242d;
     font-weight: 600;
     font-size: 17px;
+    border: none;
 }
 
 .woocommerce-checkout #dlm_order_review td.product-name {
@@ -65,6 +75,10 @@
 .woocommerce-checkout .cart_totals tr.cart-total td {
     background: #f4f7fa;
     padding: 16px 20px 16px 20px;
+}
+
+.woocommerce-checkout .cart_totals tr.cart-total td {
+    padding: 16px 16px 16px 0px;
 }
 
 .woocommerce-checkout .cart_totals tr.cart-total th {
