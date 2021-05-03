@@ -1,0 +1,40 @@
+.single-product .storefront-breadcrumb {
+    display: none;
+}
+
+/** Single Product Page **/
+
+.single-product .dlm-extension-cta {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #35495c;
+    background-color: #F3F3F3;
+    padding: 20px;
+}
+
+.single-product .dlm-extension-title h1 {
+    color: #35495c;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.single-product #dlm-extension-sidebar.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.single-product .product .dlm-extension-detail-info {
+    float: right;
+}
+
+.single-product .product .dlm-extension-detail-copy {
+    padding-right: 4%;
+}
+
+.single-product .product .dlm-extension-detail-info.sticky {
+    position: fixed;
+}
