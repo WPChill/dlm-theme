@@ -10,6 +10,3 @@
  Text Domain:  storefront
 */
 @import url("../storefront/style.css");
-@import url("assets/css/checkout.css");
-@import url("assets/css/single-product-page.css");
-@import url("assets/css/pricing-page.css");
