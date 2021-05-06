@@ -146,7 +146,6 @@
 .woocommerce-checkout .wc_payment_method label {
     background: #fff;
     margin: 0;
-    padding: 10px 16px 10px 16px !important;
 }
 
 .woocommerce-checkout #payment .payment_methods li input[type=radio]:first-child:checked+label:before  {
