@@ -11,6 +11,12 @@
     color: #35495c;
     background-color: #F3F3F3;
     padding: 20px;
+    margin-left: -100%;
+    margin-right: -100%;
+}
+
+.single-product .dlm-extension-cta p {
+    margin-bottom: 0;
 }
 
 .single-product .dlm-extension-title h1 {
@@ -18,7 +24,16 @@
     line-height: 1.4;
     text-align: center;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 5rem;
+    margin-bottom: .75rem;
+}
+
+.single-product .dlm-extension-short-description p {
+    margin-bottom: 5rem;
+    color: #6e747b;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 400;
 }
 
 .single-product #dlm-extension-sidebar.sticky {
@@ -29,6 +44,7 @@
 
 .single-product .product .dlm-extension-detail-info {
     float: right;
+    padding: 20px;
 }
 
 .single-product .product .dlm-extension-detail-copy {
@@ -37,4 +53,21 @@
 
 .single-product .product .dlm-extension-detail-info.sticky {
     position: fixed;
+}
+
+.single-product .product .dlm-extension-detail-info .dlm-extension-info-box .license-select {
+    text-align: left;
+}
+.single-product #pa_license .info{
+    float: right;
+    color: #419CCB;
+}
+
+.single-product #pa_license label {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.single-product #pa_license .variation_description {
+    padding-left: 12px;
 }

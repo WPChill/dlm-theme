@@ -25,8 +25,10 @@ function dlm_scripts() {
 	wp_deregister_style( 'storefront-style' );
 	wp_enqueue_style( 'storefront-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), '2.2.0' );
 	wp_enqueue_script( 'dlm-sticky-sidebar-js', get_stylesheet_directory_uri() . '/assets/js/sticky-sidebar.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'dlm-general-js', get_stylesheet_directory_uri() . '/assets/js/general.js', array( 'jquery' ), true );
 	if (is_page_template('template-pricing-page.php')) {
 		wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'dlm-pricing-page-js', get_stylesheet_directory_uri() . '/assets/js/pricing-page.js', array( 'jquery' ), true );
 	}
 }
 

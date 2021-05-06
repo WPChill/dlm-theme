@@ -61,6 +61,5 @@
 	});
     $(document).ready(function() {
         $.stickysidebarscroll(".dlm-extension-detail-info",{offset: {top: 10, bottom: 450}});
-		$('[data-toggle="tooltip"]').tooltip();
     });
 })(jQuery);

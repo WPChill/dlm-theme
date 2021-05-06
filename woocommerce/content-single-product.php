@@ -53,12 +53,12 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 }
 
 ?>
-
+<div class="dlm-extension-cta"><p><i class="fas fa-gift"></i> Get <strong>$624</strong> worth of extensions for just <strong>$125</strong> with our <a href="/extensions/extension-bundle/"><strong>Extension Bundle!</strong></a></p></div>
 <div itemscope itemtype="http://schema.org/Product"
 	id="product-<?php the_ID(); ?>" <?php post_class(); ?> xmlns="http://www.w3.org/1999/html" style="position:relative">
 	<!-- <div class="dlm-extension-detail-image"><?php //the_post_thumbnail( 'full' ); ?></div> -->
-	<div class="dlm-extension-cta"><?php esc_html_e( 'Included in extended pass', 'dlm-theme' ); ?></div>
 	<div class="dlm-extension-title"><h1><?php the_title(); ?></h1></div>
+	<div class="dlm-extension-short-description"><?php echo the_excerpt(); ?></div>
 	<div class="dlm-extension-detail-info">
 		<div class="dlm-extension-info-box dlm-extension-info-box-license">
 			<?php
@@ -77,12 +77,11 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 				      data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
 
 					<?php if ( ! empty( $available_variations ) ) { ?>
-						<p class="license-label"><?php echo $license_label; ?>:</p>
+						<!-- <p class="license-label"><?php //echo $license_label; ?>:</p> -->
 						<p class="license-select variations">
 							<?php $loop = 0;
 							foreach ( $attributes as $name => $options ) : $loop ++; ?>
-								<select id="<?php echo esc_attr( sanitize_title( $name ) ); ?>"
-								        name="attribute_<?php echo sanitize_title( $name ); ?>">
+								<fieldgroup id="<?php esc_attr_e( sanitize_title( $name ) ); ?>">
 									<?php
 									if ( is_array( $options ) ) {
 
@@ -125,14 +124,14 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 											foreach ( $terms as $term ) {
 												if ( ! in_array( $term->slug, $options ) ) {
 													continue;
-												}
-
-												echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( sanitize_title( $selected_value ), sanitize_title( $term->slug ), false ) . '>' . apply_filters( 'woocommerce_variation_option_name', $term->name ) . '</option>';
+												} ?>
+												<input <?php echo ($selected_value == $term->slug ? 'checked' : '' ) ?> type="radio" id="<?php esc_attr_e( $term->slug ) ?>" name="attribute_<?php echo sanitize_title( $name ); ?>" value="<?php esc_attr_e( $term->slug ) ?>">
+												<label for="<?php esc_attr_e( $term->slug ) ?>"><?php echo apply_filters( 'woocommerce_variation_option_name', $term->name ); ?></label><br><?php
 											}
 										}
 									}
 									?>
-								</select>
+								</fieldgroup>
 							<?php endforeach; ?>
 						</p>
 
