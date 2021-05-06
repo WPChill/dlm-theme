@@ -72,7 +72,7 @@ function display_price_in_variation_option_name( $term ) {
 	if ( ! empty ( $attributes ) ) {
 		foreach ( $attributes as $attribute ) {
 			if ( $attribute['attributes']['attribute_pa_license'] == $lc_term ) {
-				return $term . '<span class="info">' . strip_tags ( wc_price( $attribute['display_price'] ) ) . ' / year</span><br><span class="variation_description">( ' . strip_tags ( $attribute['variation_description'] ) . ')</span>';
+				return $term . '<span class="info">' . strip_tags ( wc_price( $attribute['display_price'] ) ) . ' / year</span><span class="variation_description">( ' . strip_tags ( $attribute['variation_description'] ) . ')</span>';
 			}
 		}
 

@@ -60,6 +60,8 @@
 		}
 	});
     $(document).ready(function() {
-        $.stickysidebarscroll(".dlm-extension-detail-info",{offset: {top: 10, bottom: 450}});
+		if (window.matchMedia('(min-width: 992px)').matches) {
+			$.stickysidebarscroll(".dlm-extension-detail-info",{offset: {top: 10, bottom: 450}});
+		}       
     });
 })(jQuery);

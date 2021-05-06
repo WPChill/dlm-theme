@@ -47,7 +47,7 @@ get_header();
 			<div class="col-md-3">
 				<?php esc_html_e('Supported Sites', 'dlm-theme'); ?>
 				<span data-toggle="tooltip" data-placement="right" title="The number of sites on which you can use Modula.">
-					<i class="fas fa-question-circle"></i>
+					<i class="icon-question"></i>
 				</span>
 			</div>
 			<div class="col-md-3"><?php esc_html_e('1 Site', 'dlm-theme'); ?></div>
@@ -63,7 +63,7 @@ get_header();
 					<br>2. Regular support - tickets get handled in 48 hours or less. 
 					<br>------------
 					<br>* On weekends, response time might slow down to 48hours for priority and up to 96 hours for regular support.">
-					<i class="fas fa-question-circle"></i>
+					<i class="icon-question"></i>
 				</span>
 			</div>
 			<div class="col-md-3"><?php esc_html_e('Regular', 'dlm-theme'); ?></div>
@@ -75,12 +75,12 @@ get_header();
 				<?php esc_html_e('Updates for 1 full year', 'dlm-theme'); ?>
 				<span data-toggle="tooltip" data-placement="right" data-html="true" title="You’ll have access to free updates for 1 year or until you cancel your subscription. 
 					<br> All of our subscriptions are automatically renewing and renew every 12 months from the last payment date.">
-					<i class="fas fa-question-circle"></i>
+					<i class="icon-question"></i>
 				</span>
 			</div>
-			<div class="col-md-3"><i class="fas fa-check"></i></div>
-			<div class="col-md-3"><i class="fas fa-check"></i></div>
-			<div class="col-md-3"><i class="fas fa-check"></i></div>
+			<div class="col-md-3"><i class="icon-check"></i></div>
+			<div class="col-md-3"><i class="icon-check"></i></div>
+			<div class="col-md-3"><i class="icon-check"></i></div>
 		</div>
 		<div class="row pricing-message">
 			<div class="pricing-message__content col-md-12">
