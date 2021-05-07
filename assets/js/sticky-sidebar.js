@@ -60,7 +60,9 @@
 		}
 	});
     $(document).ready(function() {
-		if (window.matchMedia('(min-width: 992px)').matches) {
+		console.log();
+		if (window.matchMedia('(min-width: 992px)').matches && $(document).height() > 2000) {
+			
 			$.stickysidebarscroll(".dlm-extension-detail-info",{offset: {top: 10, bottom: 450}});
 		}       
     });
