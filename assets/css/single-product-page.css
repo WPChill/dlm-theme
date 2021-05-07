@@ -78,14 +78,14 @@
     color: #419CCB;
 }
 
+.single-product .product .extra-info th {
+    background-color: transparent;
+}
+
 @media (max-width: 992px) {
     .single-product .product .dlm-extension-detail-info,
     .single-product .product .dlm-extension-detail-copy {
         width: 100%;
-    }
-
-    .single-product .product .extra-info th {
-        background-color: transparent;
     }
 
     .single-product .dlm-extension-title h1 {

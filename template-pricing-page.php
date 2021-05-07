@@ -46,7 +46,7 @@ get_header();
 		<div class="pricing-table row">
 			<div class="col-md-3">
 				<?php esc_html_e('Supported Sites', 'dlm-theme'); ?>
-				<span data-toggle="tooltip" data-placement="right" title="The number of sites on which you can use Modula.">
+				<span data-toggle="tooltip" data-placement="right" title="The number of sites on which you can use Download Monitor.">
 					<i class="icon-question"></i>
 				</span>
 			</div>
@@ -85,7 +85,7 @@ get_header();
 		<div class="row pricing-message">
 			<div class="pricing-message__content col-md-12">
 				<h5>100% No-Risk Money Back Guarantee!</h5>
-				<p>There’s no risk trying Modula: if you don’t like Modula after 14 days, we’ll refund your purchase. We take pride in a frustration-free refund process.</p>
+				<p>There’s no risk trying Download Monitor: if you don’t like Download Monitor after 14 days, we’ll refund your purchase. We take pride in a frustration-free refund process.</p>
 			</div>
 		</div>
 	</div>
