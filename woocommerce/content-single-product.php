@@ -126,7 +126,7 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 													continue;
 												} ?>
 												<input <?php echo ($selected_value == $term->slug ? 'checked' : '' ) ?> type="radio" id="<?php esc_attr_e( $term->slug ) ?>" name="attribute_<?php echo sanitize_title( $name ); ?>" value="<?php esc_attr_e( $term->slug ) ?>">
-												<label for="<?php esc_attr_e( $term->slug ) ?>"><?php echo apply_filters( 'woocommerce_variation_option_name', $term->name ); ?></label><br><?php
+												<label <?php echo ($selected_value == $term->slug ? 'class = "selected"' : '') ?> for="<?php esc_attr_e( $term->slug ) ?>"><?php echo apply_filters( 'woocommerce_variation_option_name', $term->name ); ?></label><br><?php
 											}
 										}
 									}

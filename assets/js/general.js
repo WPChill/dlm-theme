@@ -7,6 +7,8 @@ jQuery(document).ready(function($) {
                     variation_id = form[variation]['variation_id'];
                 }
             }
+            $('form.variations_form').find('label').removeClass('selected');
+            $('form.variations_form').find('label[for="' + this.id + '"]').addClass('selected');
             $('form.variations_form').find( 'input[name="variation_id"], input.variation_id' ).val( variation_id );
         });
 });
