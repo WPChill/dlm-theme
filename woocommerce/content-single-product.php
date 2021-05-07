@@ -53,7 +53,7 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 }
 
 ?>
-<div class="dlm-extension-cta"><p><i class="fas fa-gift"></i> Get <strong>$624</strong> worth of extensions for just <strong>$125</strong> with our <a href="/extensions/extension-bundle/"><strong>Extension Bundle!</strong></a></p></div>
+<div class="dlm-extension-cta"><p><i class="bullhorn-icon"></i> Get <strong>$624</strong> worth of extensions for just <strong>$125</strong> with our <a href="/extensions/extension-bundle/"><strong>Extension Bundle!</strong></a></p></div>
 <div itemscope itemtype="http://schema.org/Product"
 	id="product-<?php the_ID(); ?>" <?php post_class(); ?> xmlns="http://www.w3.org/1999/html" style="position:relative">
 	<!-- <div class="dlm-extension-detail-image"><?php //the_post_thumbnail( 'full' ); ?></div> -->
