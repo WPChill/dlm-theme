@@ -55,9 +55,33 @@
     right: 0;
 }
 
+.single-product .read-doc {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #43454b;
+    font-size: 14.4px;
+    FONT-WEIGHT: 600;
+}
+
+.single-product div.dlm-extension-info-box.dlm-extension-info-box-details.extra-info {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.single-product div.dlm-extension-info-box.dlm-extension-info-box-license > form {
+    margin-bottom: 0 !important;
+}
+
+.single-product .product .dlm-extension-detail-info .dlm-extension-info-box .license-copy {
+    color: #6e747b;
+    font-size: 14px;
+}
+
 .single-product .product .dlm-extension-detail-info {
     float: right;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .single-product .product .dlm-extension-detail-copy {
@@ -71,6 +95,7 @@
 .single-product .product .dlm-extension-detail-info .dlm-extension-info-box .license-select {
     text-align: left;
 }
+
 
 .single-product #pa_license .info {
     float: right;
@@ -107,5 +132,12 @@
 
     .single-product .dlm-extension-short-description p {
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 778px) {
+    .single-product .dlm-extension-cta {
+        margin-left: -45px;
+        margin-right: -45px;
     }
 }

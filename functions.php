@@ -1,6 +1,11 @@
 <?php
 define('DLM_BUNDLE_ID', 644);
 
+add_action( 'init', 'dlm_actions');
+function dlm_actions() {
+	remove_action( 'storefront_header', 'storefront_site_branding', 20 );	
+}
+
 function never5_dir() {
 	return site_url( '/wp-content/never5/' );
 }
@@ -138,21 +143,6 @@ function never5_head_ga() {
 }
 
 add_action( 'wp_head', 'never5_head_ga' );
-
-/**
- * Display Site Branding
- * @since  1.0.0
- * @return void
- */
-function storefront_site_branding() {
-	?>
-	<div class="site-branding">
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img
-					src="<?php echo never5_dir(); ?>/logo.png"
-					alt="Download Monitor"/><span><?php bloginfo( 'name' ); ?></span></a></h1>
-	</div>
-	<?php
-}
 
 /**
  * No 'posted on' crap please
@@ -413,3 +403,31 @@ function dlm_checkout_fields( $fields ) {
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 add_action( 'woocommerce_checkout_before_form', 'woocommerce_checkout_payment' );
+
+function storefront_primary_navigation() {
+	?>
+	<div class="site-branding">
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img
+					src="<?php echo never5_dir(); ?>/logo.png"
+					alt="Download Monitor"/><span><?php bloginfo( 'name' ); ?></span></a></h1>
+	</div>
+	<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'storefront' ); ?>">
+	<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_html( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'primary',
+				'container_class' => 'primary-navigation',
+			)
+		);
+
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'handheld',
+				'container_class' => 'handheld-navigation',
+			)
+		);
+		?>
+	</nav><!-- #site-navigation -->
+	<?php
+}

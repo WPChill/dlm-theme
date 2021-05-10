@@ -165,21 +165,18 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 
 				<?php
 			}
-			?>
-            <p class="license-copy">Licenses are yearly subscriptions, you can cancel at any time.<br/><br/>Personal licences are valid for <strong>one website</strong>, Business licenses for <strong>5 websites</strong> and a developer licence is valid for <strong>20 websites</strong>.</p>
-			<?php /*<p class="license-copy">Licences grant one year support &amp; updates. Personal licences are valid for a single site, Business licenses for 5 sites and a developer licence is valid for 20 websites.</p>*/ ?>
-		</div>
-
-		<?php
-		$documentation_slug = get_post_meta( get_the_ID(), 'documentation_slug', true );
-		if ( '' !== $documentation_slug ) {
-			?>
-			<div class="dlm-extension-info-box dlm-extension-info-box-documentation">
-				<a href="/kb/<?php echo $documentation_slug; ?>/" class="button"
-				   title="<?php echo get_the_title() . ' Documentation'; ?>">Read Documentation</a>
-			</div>
+			?><p class="license-copy">Licenses are yearly subscriptions, you can cancel at any time.</p>
+            
 			<?php
-		}
+			$documentation_slug = get_post_meta( get_the_ID(), 'documentation_slug', true );
+			if ( '' !== $documentation_slug ) {
+				?>
+				<div class="dlm-extension-info-box dlm-extension-info-box-documentation read-doc">
+					<a href="/kb/<?php echo $documentation_slug; ?>/" class=""
+					title="<?php echo get_the_title() . ' Documentation'; ?>">Read Documentation</a>
+				</div>
+				<?php
+			} 
 
 		// Get API product
 		$api_raw = get_post_meta( $product->get_id(), '_api_product_permissions', true );
@@ -225,8 +222,10 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 				}
 			}
 		}
-
 		?>
+		</div>
+
+
 	</div>
 	<div class="dlm-extension-detail-copy">
 		<?php

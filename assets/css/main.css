@@ -13,6 +13,10 @@ pre {
   margin-right: 0;
   margin-left: 0;
 }
+.site-branding {
+  max-width: 30%;
+  margin-right: 0 !important;
+}
 .site-branding h1 a img {
   margin-top: -7px;
   padding-right: 20px;
