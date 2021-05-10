@@ -4,22 +4,30 @@
 .woocommerce-checkout .entry-header{
     display: none;
 }
+
+.woocommerce-checkout .storefront-breadcrumb {
+    padding: 0;
+    margin: 0;
+}
+
 .woocommerce-checkout .dlm-checkout-page-header {
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     display: block;
     max-width: 420px;
     margin: 0 auto;
 }
+
 .woocommerce-checkout .dlm-checkout-page-header .dlm-page-title {
     color: #1e242d;
     margin-bottom: 0;
     font-weight: 700;
-    padding-top: 5px;
     display: inline-block;
 }
+
 .woocommerce-checkout .dlm-checkout-page-header .dlm-checkout-logo {
-    width: 70px;
+    width: 60px;
+    height: 50px;
     float: left;
     display: inline-block;
 }
@@ -140,7 +148,7 @@
 }
 
 .woocommerce-checkout .wc_payment_methods li.wc_payment_method {
-    margin: 10px 100px !important;
+    margin: 10px 24px !important;
 }
 
 .woocommerce-checkout .wc_payment_method label {
@@ -163,9 +171,33 @@
     text-transform: capitalize;
     padding: 10px 0px 10px 0px !important;
 }
+
 .woocommerce-checkout #eh-stripe-exp-element,
 .woocommerce-checkout #eh-stripe-cvc-element {
     background-color: #f4f7fa;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li img.stripe-icon {
+    display: none;
+}
+
+.woocommerce-checkout #wc-stripe-cc-form,
+.woocommerce-checkout li.wc_payment_method.payment_method_braintree_paypal > div {
+    padding-top: 0 !important;
+}
+
+.woocommerce-checkout li.wc_payment_method.payment_method_stripe > div {
+    padding-top: 0 !important;
+}
+
+.woocommerce-checkout li.wc_payment_method.payment_method_stripe > label:after {
+    width: 160px;
+    height: 19px;
+    float: right;
+    background: url(../images/stripe.png) no-repeat 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    content: '';
 }
 
 .woocommerce-checkout .stripe-card-group {
