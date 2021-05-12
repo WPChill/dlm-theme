@@ -1,7 +1,9 @@
-.single-wpkb-article .storefront-breadcrumb {
+.single-wpkb-article .storefront-breadcrumb,
+.tax-wpkb-category .storefront-breadcrumb {
   display: none;
 }
-.single-wpkb-article .woocommerce-breadcrumb a:first-of-type:before {
+.single-wpkb-article .woocommerce-breadcrumb a:first-of-type:before,
+.tax-wpkb-category .woocommerce-breadcrumb a:first-of-type:before {
   content: '';
 }
 .single-wpkb-article .woocommerce-breadcrumb,
@@ -20,10 +22,12 @@
 .tax-wpkb-category .entry-content ul {
   margin-left: 1em;
 }
-.single-wpkb-article #documentation-sidebar {
+.single-wpkb-article #documentation-sidebar,
+.tax-wpkb-category #documentation-sidebar {
   float: left;
 }
-.single-wpkb-article .wpkb-search-input .wpkb-search-term {
+.single-wpkb-article .wpkb-search-input .wpkb-search-term,
+.tax-wpkb-category .wpkb-search-input .wpkb-search-term  {
   width: 90%;
 }
 .single-wpkb-article #documentation-sidebar,
@@ -67,7 +71,8 @@
   width: 85%;
   text-align: center;
 }
-.single-wpkb-article #primary {
+.single-wpkb-article #primary,
+.tax-wpkb-category #primary {
   width: 70%;
 }
 .single-wpkb-article #primary,
@@ -174,7 +179,9 @@
 
 @media (max-width: 768px) {
   .single-wpkb-article #primary,
-  .single-wpkb-article #documentation-sidebar {
+  .tax-wpkb-category #primary,
+  .single-wpkb-article #documentation-sidebar,
+  .tax-wpkb-category #documentation-sidebar {
     width: 100%;
   }
 }
