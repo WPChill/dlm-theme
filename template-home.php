@@ -24,9 +24,7 @@ get_header(); ?>
 		get_template_part( 'template-parts/home', 'intro' );
 
 		// include home
-		include( ABSPATH . '/wp-content/never5/home.php' );
-
-//					get_template_part( 'template-parts/home', 'features' );
+		get_template_part( 'template-parts/home', 'features' );
 		?>
 
 		<?php

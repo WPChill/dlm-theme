@@ -55,6 +55,9 @@
   width: 85%;
   text-align: center;
 }
+.single-wpkb-article #primary {
+  width: 70%;
+}
 .single-wpkb-article #primary,
 .tax-wpkb-category #primary {
   padding-left: 30px;
@@ -155,4 +158,10 @@
 }
 .page .wpkb-list .wpkb-list-content ul li.wpkb-even {
   margin-right: 1%;
+}
+
+@media (max-width: 767px) {
+  .single-wpkb-article #primary {
+    width: 100%;
+  }
 }

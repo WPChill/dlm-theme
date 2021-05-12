@@ -39,9 +39,6 @@
 .home-feature-icons ul li i {
   font-size: 4em;
 }
-.home-feature-icons ul li p {
-  padding-top: 20px;
-}
 .home-features .goal,
 .home-features .final {
   text-align: center;
@@ -83,9 +80,46 @@
   margin-right: 0 !important;
 }
 .home-featured-extensions .home-featured-show-all {
+  padding-top: 2em;
   text-align: center;
   margin-bottom: 0;
 }
 .home .site-footer {
   margin-top: 1em;
+}
+
+.home .icon-download:before {
+  width: 60px;
+  height: 60px;
+  background: url(../images/download.png) no-repeat 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  content: '';
+}
+
+.home .icon-bar-chart:before {
+  width: 60px;
+  height: 60px;
+  background: url(../images/chart.png) no-repeat 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  content: '';
+}
+
+.home .icon-random:before {
+  width: 60px;
+  height: 60px;
+  background: url(../images/random.png) no-repeat 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  content: '';
+}
+
+.home .icon-gears:before {
+  width: 75px;
+  height: 60px;
+  background: url(../images/cogs.png) no-repeat 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  content: '';
 }

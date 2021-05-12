@@ -32,6 +32,9 @@ $order_button_text = 'Complete your purchase';
 	<img class="dlm-checkout-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/dlm-logo.png' ?>" />
 	<h1 class="dlm-page-title"><?php esc_html_e( 'Download Monitor', 'dlm-theme' ); ?></h1>
 </div>
+
+<?php woocommerce_checkout_login_form(); ?>
+
 <div class="checkout woocommerce-checkout order-review">
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 

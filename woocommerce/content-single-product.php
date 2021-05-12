@@ -60,7 +60,13 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 	<div class="dlm-extension-title"><h1><?php the_title(); ?></h1></div>
 	<div class="dlm-extension-short-description"><?php echo the_excerpt(); ?></div>
 	<div class="dlm-extension-detail-info">
-		<div class="dlm-extension-info-box dlm-extension-info-box-license">
+		<div class="dlm-extension-info-box dlm-extension-info-box-bundle">
+			<h3 class='purchase-extension-title'><?php esc_html_e('Purchase Extension', 'dlm-theme'); ?></h3>
+			<p><?php esc_html_e('Get all of our extensions, save money, and keep your files organized.', 'dlm-theme'); ?></p>
+			<a href="/pricing" class="button dlm-purchase-sidebar-button"><?php esc_html_e('BUNDLE & SAVE', 'dlm-theme'); ?></a>
+			<span>...<?php esc_html_e('or,', 'dlm-theme'); ?> <a href="#" id="extension-only"><?php esc_html_e('just purchase this extension', 'dlm-theme'); ?></a>.</span>
+		</div>
+		<div class="dlm-extension-info-box dlm-extension-info-box-license" style="display:none">
 			<?php
 			if ( $variable ) {
 
@@ -166,18 +172,10 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 				<?php
 			}
 			?><p class="license-copy">Licenses are yearly subscriptions, you can cancel at any time.</p>
-            
-			<?php
-			$documentation_slug = get_post_meta( get_the_ID(), 'documentation_slug', true );
-			if ( '' !== $documentation_slug ) {
-				?>
-				<div class="dlm-extension-info-box dlm-extension-info-box-documentation read-doc">
-					<a href="/kb/<?php echo $documentation_slug; ?>/" class=""
-					title="<?php echo get_the_title() . ' Documentation'; ?>">Read Documentation</a>
-				</div>
-				<?php
-			} 
+		</div>
 
+		<div>
+		<?php
 		// Get API product
 		$api_raw = get_post_meta( $product->get_id(), '_api_product_permissions', true );
 
@@ -199,7 +197,7 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 
 							// The Product Meta
 							$product_meta = array(
-								'_version' => 'Version',
+								'_version' => 'Version:',
 							);
 
 							// Loop through the meta
@@ -222,6 +220,17 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 				}
 			}
 		}
+
+		// Documentation link
+		$documentation_slug = get_post_meta( get_the_ID(), 'documentation_slug', true );
+		if ( '' !== $documentation_slug ) {
+			?>
+			<div class="dlm-extension-info-box dlm-extension-info-box-documentation read-doc">
+				<a href="/kb/<?php echo $documentation_slug; ?>/" class=""
+				title="<?php echo get_the_title() . ' Documentation'; ?>">Read Documentation</a>
+			</div>
+			<?php
+		} 
 		?>
 		</div>
 

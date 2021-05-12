@@ -5,6 +5,5 @@
 </div>
 
 <div class="home-buttons">
-	<a href="<?php echo site_url( '/extensions/' ); ?>" class="button alt">Browse Extensions</a>
-	<a href=">" class="button" target="_blank">Download for Free</a>
+	<a href="<?php echo site_url( '/pricing/' ); ?>" class="button alt">View Pricing</a>
 </div>

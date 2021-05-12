@@ -14,7 +14,7 @@ pre {
   margin-left: 0;
 }
 .site-branding {
-  max-width: 30%;
+  width: 30% !important;
   margin-right: 0 !important;
 }
 .site-branding h1 a img {
@@ -152,4 +152,12 @@ iframe[name="google_conversion_frame"] {
 .n5cfconsent label {
   font-weight: normal;
   font-size: 90%;
+}
+.extension-bundle-notice .ebn-icon-wrapper .icon-cta-bullhorn:before {
+    width: 35px;
+    height: 35px;
+    background: url(../images/bullhorn-white.png) no-repeat 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    content: '';
 }

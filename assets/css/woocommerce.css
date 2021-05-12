@@ -69,13 +69,14 @@
   font-size: .9em;
 }
 .single-product .product .dlm-extension-detail-info .dlm-extension-info-box.extra-info table tr th {
-  width: 30%;
+  width: 15%;
   padding: 5px 0;
   text-align: left;
+  font-weight: 400;
 }
 .single-product .product .dlm-extension-detail-info .dlm-extension-info-box.extra-info table tr td {
   width: 70%;
-  padding: 5px 0 5px 20px;
+  padding: 5px 0 5px 0px;
   background: transparent;
 }
 .single-product .product .dlm-extension-detail-info .dlm-extension-info-box .license-free {
@@ -185,6 +186,13 @@
 ul.products li.product img {
   width: 100%;
 }
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  float: left !important;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+  margin-left: 3%;
+  margin-right: 0 !important;
+}
 .woocommerce-account .woocommerce-MyAccount-navigation ul {
   padding: 0 0 10px 0;
   margin: 0;
@@ -220,4 +228,14 @@ ul.products li.product img {
 .woocommerce-account .woocommerce-MyAccount-content .change_payment_method,
 .woocommerce-account .woocommerce-MyAccount-content .changeLicense {
   font-size: .9em;
+}
+
+@media (max-width: 767px) {
+  .woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 100%;
+  }
+  .woocommerce-account .woocommerce-MyAccount-content {
+    width: 100%;
+    margin: 0;
+  }
 }

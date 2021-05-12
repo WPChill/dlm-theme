@@ -3,7 +3,8 @@ define('DLM_BUNDLE_ID', 644);
 
 add_action( 'init', 'dlm_actions');
 function dlm_actions() {
-	remove_action( 'storefront_header', 'storefront_site_branding', 20 );	
+	remove_action( 'storefront_header', 'storefront_site_branding', 20 );
+	remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
 }
 
 function never5_dir() {
@@ -29,7 +30,7 @@ function dlm_scripts() {
 	wp_dequeue_style( 'storefront-style' );
 	wp_deregister_style( 'storefront-style' );
 	wp_enqueue_style( 'storefront-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), '2.2.0' );
-	wp_enqueue_script( 'dlm-sticky-sidebar-js', get_stylesheet_directory_uri() . '/assets/js/sticky-sidebar.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'dlm-product-page-js', get_stylesheet_directory_uri() . '/assets/js/product-page.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'dlm-general-js', get_stylesheet_directory_uri() . '/assets/js/general.js', array( 'jquery' ), true );
 	if (is_page_template('template-pricing-page.php')) {
 		wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array( 'jquery' ) );
@@ -171,7 +172,7 @@ add_shortcode( 'dlm-bundle-notice', function () {
 
 	$return = '<div class="extension-bundle-notice">';
 
-	$return .= '<div class="ebn-icon-wrapper"><i class="fa fa-bullhorn"></i></div>';
+	$return .= '<div class="ebn-icon-wrapper"><i class="icon-cta-bullhorn"></i></div>';
 
 	$return .= sprintf( '<p>Get <strong>$%s</strong> worth of extensions for just <strong>$%s</strong> with our <a href="/extensions/extension-bundle/"><strong>Extension Bundle!</strong></a></p>', absint(get_post_meta( DLM_BUNDLE_ID, 'value_single', true ) ), $variation_bundle_price );
 
@@ -430,4 +431,21 @@ function storefront_primary_navigation() {
 		?>
 	</nav><!-- #site-navigation -->
 	<?php
+}
+
+function storefront_header_cart() {
+	if ( storefront_is_woocommerce_activated() ) {
+		if ( is_cart() ) {
+			$class = 'current-menu-item';
+		} else {
+			$class = '';
+		}
+		?>
+	<ul id="site-header-cart" class="site-header-cart menu">
+		<li class="<?php echo esc_attr( $class ); ?>">
+			<?php storefront_cart_link(); ?>
+		</li>
+	</ul>
+		<?php
+	}
 }

@@ -24,6 +24,8 @@
 
 .page-template-template-pricing-page .pricing-title-section .pricing-header h1 a {
     text-decoration: none;
+    font-weight: 700;
+    color: #1e242d;
 }
 
 .page-template-template-pricing-page .pricing-title-section .pricing-header h1 a:hover {

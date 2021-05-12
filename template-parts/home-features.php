@@ -1,11 +1,13 @@
 <div class="home-feature-icons">
 	<ul>
-		<li><i class="fa fa-download"></i><p>Add, manage, categorise and tag downloadable files using the familiar WordPress UI</p></li>
-		<li><i class="fa fa-bar-chart"></i><p>Display download links, track downloads, log access <span class="amp">&amp;</span> show file download counts</p></li>
-		<li><i class="fa fa-random"></i><p>Support for adding multiple file versions per download, as well as mirrors</p></li>
-		<li><i class="fa fa-gears"></i><p>Developer friendly code —&nbsp;Custom Post Types, endpoints <span class="amp">&amp;</span> template files</p></li>
+		<li><i class="icon-download"></i><p>Add, manage, categorise and tag downloadable files using the familiar WordPress UI</p></li>
+		<li><i class="icon-bar-chart"></i><p>Display download links, track downloads, log access <span class="amp">&amp;</span> show file download counts</p></li>
+		<li><i class="icon-random"></i><p>Support for adding multiple file versions per download, as well as mirrors</p></li>
+		<li><i class="icon-gears"></i><p>Developer friendly code —&nbsp;Custom Post Types, endpoints <span class="amp">&amp;</span> template files</p></li>
 	</ul>
 </div>
+
+<?php get_template_part( 'template-parts/home', 'featured-extensions' ); ?>
 
 <div class="home-features">
 	<p class="goal">Download Monitor’s goal is to keep your files organized and provide means to monitor the amount of downloads a file has, along with an easy method of linking to those files using shortcodes.</p>

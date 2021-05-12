@@ -42,8 +42,7 @@ if ( ! empty( $fp_ids ) ) : ?>
                     </li>
 				<?php endforeach; ?>
             </ul>
-            <p class="home-featured-show-all"><a href="<?php echo site_url( 'extensions/' ); ?>" class="button alt">Show
-                    All Extensions</a></p>
+            <p class="home-featured-show-all"><a href="<?php echo site_url( 'extensions/' ); ?>" class="button alt">Browse our Extensions Catalog</a></p>
         </div>
     </div>
 </div>

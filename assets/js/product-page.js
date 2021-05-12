@@ -60,10 +60,35 @@
 		}
 	});
     $(document).ready(function() {
-		console.log();
+		// Radio button variation select
+		var checked = $('#pa_license input:checked')[0];
+        if (checked !== undefined) {
+            selectVariation(checked);
+        }
+        $('#pa_license input').on('change', function() {
+            $('form.variations_form').find('label').removeClass('selected');
+            selectVariation(this);
+        });
+        $('#extension-only').on('click', function(e) {
+            e.preventDefault();
+            $('.dlm-extension-info-box-bundle').hide();
+            $('.dlm-extension-info-box-license').show();
+        });
+		// Sticky sidebar
 		if (window.matchMedia('(min-width: 992px)').matches && $(document).height() > 2000) {
-			
 			$.stickysidebarscroll(".dlm-extension-detail-info",{offset: {top: 10, bottom: 450}});
-		}       
+		}
     });
+	
+	function selectVariation(radio) {
+		var form = $('form.variations_form').data( 'product_variations' );
+		for (let variation = 0; variation < form.length; variation++) {
+			if (form[variation]['attributes'][radio.name] == radio.value) {
+				variation_id = form[variation]['variation_id'];
+			}
+		}
+		$('form.variations_form').find('label[for="' + radio.id + '"]').addClass('selected');
+		$('form.variations_form').find( 'input[name="variation_id"], input.variation_id' ).val( variation_id );
+	}
+
 })(jQuery);
