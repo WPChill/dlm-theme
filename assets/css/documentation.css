@@ -1,3 +1,9 @@
+.single-wpkb-article .storefront-breadcrumb {
+  display: none;
+}
+.single-wpkb-article .woocommerce-breadcrumb a:first-of-type:before {
+  content: '';
+}
 .single-wpkb-article .woocommerce-breadcrumb,
 .tax-wpkb-category .woocommerce-breadcrumb {
   margin-bottom: 3em;
@@ -13,6 +19,9 @@
 .single-wpkb-article .entry-content ul,
 .tax-wpkb-category .entry-content ul {
   margin-left: 1em;
+}
+.single-wpkb-article #documentation-sidebar {
+  float: left;
 }
 .single-wpkb-article #documentation-sidebar,
 .tax-wpkb-category #documentation-sidebar {

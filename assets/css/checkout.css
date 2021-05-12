@@ -302,6 +302,10 @@
     padding: 15px 35px;
 }
 
+.woocommerce-checkout form div.form-row.place-order .checkout-total p.location_confirmation {
+    display: none;
+}
+
 /* Footer */
 
 .woocommerce-checkout .site-footer {

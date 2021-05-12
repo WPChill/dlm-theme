@@ -29,6 +29,8 @@ add_action('wp_enqueue_scripts', 'dlm_styles');
 function dlm_scripts() {
 	wp_dequeue_style( 'storefront-style' );
 	wp_deregister_style( 'storefront-style' );
+	// wp_dequeue_style( 'storefront-icons' );
+	// wp_deregister_style( 'storefront-icons' );
 	wp_enqueue_style( 'storefront-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), '2.2.0' );
 	wp_enqueue_script( 'dlm-product-page-js', get_stylesheet_directory_uri() . '/assets/js/product-page.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'dlm-general-js', get_stylesheet_directory_uri() . '/assets/js/general.js', array( 'jquery' ), true );
