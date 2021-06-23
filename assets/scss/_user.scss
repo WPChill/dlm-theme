@@ -1,0 +1,35 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+
+.pa-b0 {
+	position:absolute;
+	bottom:0;
+}
+
+.df-jc-sb {
+	justify-content: space-between;
+}
+
+.pa-t0 {
+	position:absolute;
+	top:0;
+}
+
+.pa-l0 {
+	position:absolute;
+	left:0;
+}
+
+.pa-r0 {
+	position:absolute;
+	right:0;
+}
+
+.testimonial__stars {
+	width: 94px;
+    height: 20px;
+    background: url(../images/star.png) repeat-x 50% 50%;
+    background-size: 20%;
+}

@@ -1,12 +1,13 @@
 /*
- Theme Name:   DLM
- Theme URI:    http://www.download-monitor.com/
- Description:  Download Monitor Theme based on StoreFront.
- Author:       Barry Kooij
- Author URI:   http://barrykooij.com
- Template:     storefront
- Version:      1.0.0
- Tags:         wow, much, very, so, stahp
- Text Domain:  storefront
+Theme Name: WPChill Theme
+Theme URI: https://wpchill.com
+Author: WPChil;
+Author URI: https://wpchill.com
+Description: Chill Theme
+Version: 1.0.0
+Tested up to: 5.7
+Requires PHP: 5.4.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: wpchill-theme
 */
-@import url("../storefront/style.css");
