@@ -119,95 +119,95 @@ add_action( 'widgets_init', 'wpchill_theme_init_sidebar' );
 /**
  * Redirect the user to our custom login page
  */
-function wpchill_redirect_login_page() {
-	$login_page  = home_url( '/login/' );
-	$page_viewed = isset( $_SERVER['REQUEST_URI'] ) ? basename( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) ) : '';
+// function wpchill_redirect_login_page() {
+// 	$login_page  = home_url( '/login/' );
+// 	$page_viewed = isset( $_SERVER['REQUEST_URI'] ) ? basename( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) ) : '';
 
-	if ( 0 === strpos( $page_viewed, 'wp-login.php' ) && isset( $_SERVER['REQUEST_METHOD'] ) && 'GET' === $_SERVER['REQUEST_METHOD'] ) {
+// 	if ( 0 === strpos( $page_viewed, 'wp-login.php' ) && isset( $_SERVER['REQUEST_METHOD'] ) && 'GET' === $_SERVER['REQUEST_METHOD'] ) {
 
-		wp_redirect( $login_page );//phpcs:ignore
-		exit;
-	}
-}
-if ( ! is_user_logged_in() ) {
-	add_action( 'init', 'wpchill_redirect_login_page' );
-}
+// 		wp_redirect( $login_page );//phpcs:ignore
+// 		exit;
+// 	}
+// }
+// if ( ! is_user_logged_in() ) {
+// 	add_action( 'init', 'wpchill_redirect_login_page' );
+// }
 
-/**
- * Redirect users after succesfull login
- */
-function admin_default_page() {
-	return '/';
-}
+// /**
+//  * Redirect users after succesfull login
+//  */
+// function admin_default_page() {
+// 	return '/';
+// }
 
-	add_filter( 'login_redirect', 'admin_default_page' );
+// 	add_filter( 'login_redirect', 'admin_default_page' );
 
-/**
- * Redirect the user to our logout page after logout
- */
-function logout_redirect() {
-	$login_page = home_url( '/login/' );
-	wp_redirect( $login_page . '?login=false' );//phpcs:ignore
-	exit;
-}
-add_action( 'wp_logout', 'logout_redirect' );
+// /**
+//  * Redirect the user to our logout page after logout
+//  */
+// function logout_redirect() {
+// 	$login_page = home_url( '/login/' );
+// 	wp_redirect( $login_page . '?login=false' );//phpcs:ignore
+// 	exit;
+// }
+// add_action( 'wp_logout', 'logout_redirect' );
 
-/**
- * Override the basic WordPress login form and use our own
- *
- * @param array $args various arguments we pass inside the form.
- */
-function wpchill_login_form( $args ) {
+// /**
+//  * Override the basic WordPress login form and use our own
+//  *
+//  * @param array $args various arguments we pass inside the form.
+//  */
+// function wpchill_login_form( $args ) {
 
-	$form = '
-			<form class="mb-6" name="' . $args['form_id'] . '" id="' . $args['form_id'] . '" action="' . esc_url( site_url( 'wp-login.php', 'login_post' ) ) . '" method="post">
-				' . '
-				<div class="form-group">
-					<label class="form-label" for="' . esc_attr( $args['id_username'] ) . '">' . esc_html( $args['label_username'] ) . '</label>
-					<input class="form-control" type="text" name="log" id="' . esc_attr( $args['id_username'] ) . '" class="input" value="' . esc_attr( $args['value_username'] ) . '" size="20" />
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="' . esc_attr( $args['id_password'] ) . '">' . esc_html( $args['label_password'] ) . '</label>
-					<input class="form-control" type="password" name="pwd" id="' . esc_attr( $args['id_password'] ) . '" class="input" value="" size="20" />
-				</div>
-				' . '
-				' . ( $args['remember'] ? '<p class="login-remember"><label><input name="rememberme" type="checkbox" id="' . esc_attr( $args['id_remember'] ) . '" value="forever"' . ( $args['value_remember'] ? ' checked="checked"' : '' ) . ' /> ' . esc_html( $args['label_remember'] ) . '</label></p>' : '' ) . '
-				<p class="login-submit">
-					<input type="submit" name="wp-submit" id="' . esc_attr( $args['id_submit'] ) . '" class="btn w-100 btn-primary" value="' . esc_attr( $args['label_log_in'] ) . '" />
-					<input type="hidden" name="redirect_to" value="' . esc_url( $args['redirect'] ) . '" />
-				</p>
-				' . '
-			</form>';
+// 	$form = '
+// 			<form class="mb-6" name="' . $args['form_id'] . '" id="' . $args['form_id'] . '" action="' . esc_url( site_url( 'wp-login.php', 'login_post' ) ) . '" method="post">
+// 				' . '
+// 				<div class="form-group">
+// 					<label class="form-label" for="' . esc_attr( $args['id_username'] ) . '">' . esc_html( $args['label_username'] ) . '</label>
+// 					<input class="form-control" type="text" name="log" id="' . esc_attr( $args['id_username'] ) . '" class="input" value="' . esc_attr( $args['value_username'] ) . '" size="20" />
+// 				</div>
+// 				<div class="form-group">
+// 					<label class="form-label" for="' . esc_attr( $args['id_password'] ) . '">' . esc_html( $args['label_password'] ) . '</label>
+// 					<input class="form-control" type="password" name="pwd" id="' . esc_attr( $args['id_password'] ) . '" class="input" value="" size="20" />
+// 				</div>
+// 				' . '
+// 				' . ( $args['remember'] ? '<p class="login-remember"><label><input name="rememberme" type="checkbox" id="' . esc_attr( $args['id_remember'] ) . '" value="forever"' . ( $args['value_remember'] ? ' checked="checked"' : '' ) . ' /> ' . esc_html( $args['label_remember'] ) . '</label></p>' : '' ) . '
+// 				<p class="login-submit">
+// 					<input type="submit" name="wp-submit" id="' . esc_attr( $args['id_submit'] ) . '" class="btn w-100 btn-primary" value="' . esc_attr( $args['label_log_in'] ) . '" />
+// 					<input type="hidden" name="redirect_to" value="' . esc_url( $args['redirect'] ) . '" />
+// 				</p>
+// 				' . '
+// 			</form>';
 
-	if ( $args['echo'] ) {
-		echo $form;// phpcs:ignore
-	} else {
-		return $form;
-	}
-}
+// 	if ( $args['echo'] ) {
+// 		echo $form;// phpcs:ignore
+// 	} else {
+// 		return $form;
+// 	}
+// }
 
-/**
- * Redirect the user on failed login attempt
- */
-function wpchill_custom_login_failed() {
-	$login_page = home_url( '/login/' );
-	wp_redirect( $login_page . '?login=failed' ); //phpcs:ignore
-	exit;
-}
-add_action( 'wp_login_failed', 'wpchill_custom_login_failed' );
+// /**
+//  * Redirect the user on failed login attempt
+//  */
+// function wpchill_custom_login_failed() {
+// 	$login_page = home_url( '/login/' );
+// 	wp_redirect( $login_page . '?login=failed' ); //phpcs:ignore
+// 	exit;
+// }
+// add_action( 'wp_login_failed', 'wpchill_custom_login_failed' );
 
-/**
- * Redirect the user on empty fields
- *
- * @param string $user     e.g admin.
- * @param string $username the username that was entered.
- * @param string $password the password that was entered.
- */
-function wpchill_verify_user_pass( $user, $username, $password ) {
-	$login_page = home_url( '/login/' );
-	if ( '' === $username || '' === $password ) {
-		wp_redirect( $login_page . '?login=empty' );//phpcs:ignore
-		exit;
-	}
-}
-add_filter( 'authenticate', 'wpchill_verify_user_pass', 1, 3 );
+// /**
+//  * Redirect the user on empty fields
+//  *
+//  * @param string $user     e.g admin.
+//  * @param string $username the username that was entered.
+//  * @param string $password the password that was entered.
+//  */
+// function wpchill_verify_user_pass( $user, $username, $password ) {
+// 	$login_page = home_url( '/login/' );
+// 	if ( '' === $username || '' === $password ) {
+// 		wp_redirect( $login_page . '?login=empty' );//phpcs:ignore
+// 		exit;
+// 	}
+// }
+// add_filter( 'authenticate', 'wpchill_verify_user_pass', 1, 3 );
