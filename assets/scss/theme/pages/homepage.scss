@@ -1,0 +1,131 @@
+.homepage-header {
+    .homepage-click {
+        width: 179px;
+        height: 50px;
+        background: linear-gradient(180deg, #3CA4D1 37.92%, #1D69A6 100%);
+        border-radius: 6px;
+        align-items: center;
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .intro {
+        width: 417px;
+        height: 120px;
+        left: 195px;
+        top: 259px;
+        font-family: HK Grotesk;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 52px;
+        line-height: 60px;
+        color: #1A1A57E5;
+    }
+
+    .description {
+        width: 435px;
+        height: 128px;
+        left: 200px;
+        top: 405px;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 32px;
+        color: rgba(26, 26, 87, 0.7);
+    }
+}
+//Benefits
+
+.text-benefits {
+    width: 60px;
+    height: 60px;
+    background-color: #3CA6D3;
+    border-radius: 60px;
+
+    .homepage-benefits{
+        width:32.5px; 
+        height:26px; 
+        margin:15px;
+    }
+}
+
+.benefits {
+    .homepage-titles {
+        width: 320px;
+        height: 32px;
+        font-weight: 800;
+        font-size: 21px;
+        line-height: 149.85%;
+        letter-spacing: -0.01em;
+        color: #1A1A57;
+    }
+
+    .benefits-description {
+        width: 318px;
+        height: 91px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(26, 26, 87, 0.7);
+    }
+}
+
+//Extentions
+.extentions-title {
+    width: 333px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 31px;
+    line-height: 143.33%;
+    text-align: center;
+    color: rgba(26, 26, 87, 0.9);
+    margin-top: 97px;
+
+}
+.homepage-extentions {
+    background-color: #E8F0F6;
+
+    .click-extensions {
+        background: linear-gradient(180deg, #3CA4D1 20%, #2F8DC1 100%);
+        border-radius: 6px;
+        width: 300px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 120px;
+    }
+
+    .card {
+        background-color: #FFFFFF;
+        width: 333px;
+    }
+
+    .product-footer {
+        width: 100%;
+    }
+
+    .card-extension {
+        width: 100%;
+    }
+}
+
+.intuitive {
+    .description-intuitive {
+        width: 457px;
+    }
+}
+
+.quick-add {
+    .description-quick-add {
+        width: 457px;
+    }
+  
+}
+
+.versioning {
+    .description-versioning {
+        width: 457px;
+    }
+
+}
