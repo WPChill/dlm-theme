@@ -17,6 +17,7 @@ function wpchill_theme_support() {
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'woocommerce' );
 
 	register_nav_menus(
 		[
@@ -115,6 +116,41 @@ function wpchill_theme_init_sidebar() {
 
 }
 add_action( 'widgets_init', 'wpchill_theme_init_sidebar' );
+
+/**
+ * SHOP PAGE
+ * Get short description
+ */
+function wpchill_theme_get_product_description() {
+	global $product;
+
+	echo '<p class="mb-0 pb-6 extensions-description">' . esc_html( $product->get_short_description() ) . '</p>';
+}
+add_action( 'woocommerce_shop_loop_item_title', 'wpchill_theme_get_product_description', 20 );
+remove_action ('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+add_action ('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 15);
+
+function woocommerce_template_loop_product_link_open() {
+	global $product;
+
+	$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+
+	echo '<a href="' . esc_url( $link ) . '" class="card-img-top">';
+}
+
+function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail', $deprecated1 = 0, $deprecated2 = 0 ) {
+	global $product;
+
+	$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
+
+	return $product ? $product->get_image( $image_size, array( 'class' => 'card-img-top' ) ) : '';
+}
+
+function wpchill_woocommerce_product_add_to_cart_text( $text ) {
+	return esc_html__( 'Read more' );
+}
+
+add_filter( 'woocommerce_product_add_to_cart_text', 'wpchill_woocommerce_product_add_to_cart_text' );
 
 /**
  * Redirect the user to our custom login page
