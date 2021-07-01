@@ -27,8 +27,7 @@
 				</div>
 			</div>
 			<div class="col-xxl-6 col-md-6 text-right" style="z-index:0;">
-				<img class="img-fluid"
-					src="wp-content\themes\dlm-theme\assets\images\DM2.png">
+				<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Union.png">
 			</div>
 		</div>
 
