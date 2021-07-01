@@ -1,0 +1,102 @@
+.extensions-header {
+    position: relative;
+    font-style: normal;
+    height: 624px;
+    border-bottom-left-radius: 1025px 50px;
+    border-bottom-right-radius: 1025px 50px;
+
+    .page-title-container h1 {
+        font-weight: 900;
+        font-size: 52px;
+        line-height: 60px;
+        letter-spacing: -0.01em;
+    }
+
+    .page-title-container {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 32px;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 50px;
+    }
+
+    .bundle-container {
+        border: 3px solid #FFFFFF;
+        border-radius: 5px;
+        padding: 50px;
+    }
+
+    .bundle-price {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 32px;
+    }
+
+    .bundle-button {
+        color: #1D69A6;
+        background-color: #FFFFFF;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 169.39%;
+    }
+
+    .arrow-products {
+        position: absolute;
+        bottom: -10%;
+        left: 47%;
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.woocommerce {
+    .woocommerce-result-count {
+        float: none;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 169.39%;
+        color: #1A1A57;
+    }
+
+    .woocommerce-ordering {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .orderby {
+            margin-right: 1.25rem;
+            background: rgba(29, 105, 166, 0.1);
+            border-radius: 6px;
+            padding: 10px 25px;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 169.39%;
+        }
+    }
+}
+
+.extensions-content {
+    a {
+        text-decoration: none;
+        h2 {
+            font-size: 21px;
+            line-height: 149.85%;
+            letter-spacing: -0.01em;
+            color: #1A1A57;
+        }
+    }
+
+    .extensions-description {
+        color: rgba(26, 26, 87, 0.7);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        min-height: 170px;
+    }
+}
