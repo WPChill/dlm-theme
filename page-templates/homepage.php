@@ -17,14 +17,12 @@
 			<div class="col-xxl-6 col-md-6 text-md-left mb-xs-3 mb-md-0 ">
 				<h1 class="lh-1 mb-3 intro">Introducing </br> Download Monitor</h1>
 				<p class="mb-4 description">A WordPress plugin which provides an intuitive UI for uploading and managing downloadable files, inserting download links into posts & logging downloads.</p>
-
-				<div class="d-grid gap-2">
-					<a class="btn btn-primary homepage-click me-1" href="/pricing/">
-						View pricing
+				<div class="text-center pb-5">
+					<button class="btn btn-primary lift  homepage-click" type="submit" href="/pricing/">
+					View pricing
 						<i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
-					</a>
-					
-				</div>
+					</button>
+        		</div>
 			</div>
 			<div class="col-xxl-6 col-md-6 text-right" style="z-index:0;">
 				<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/DM2.png">
@@ -101,37 +99,47 @@ $fp_ids   = $fp_query->query( array(
 
 ?>
 
-<section class="py-8 py-md-11 border-bottom">
-
-	<div class="container homepage-extentions">
-		
+<section class="homepage-extentions">
+	<div class="container">
+	<h2 class="extentions-title text-center pt-5">Popular Extensions</h2>
 		<div class="row">
-		<h2 class="extentions-title">Popular Extensions</h2>
-			<div class="col-12 col-md-6 d-flex card-extension">
-			<?php foreach ( $fp_ids as $fp_id ) : $fproduct = wc_get_product( $fp_id ); ?>
+		<?php foreach ( $fp_ids as $fp_id ) : $fproduct = wc_get_product( $fp_id ); ?>
+			<div class="col-12 col-md-6 col-lg-4 d-flex">
+			
 				<div class="card mb-6 shadow-light-lg lift lift-lg">
-					<div class="card-img-top">
-						<a href="<?php echo get_permalink( $fproduct->get_id() ); ?>">
-							<?php echo get_the_post_thumbnail( $fproduct->get_id(), 'shop_catalog' ); ?>
-						</a>   
-					</div>     
-					<a class="card-body">
-						<h3><?php echo $fproduct->get_title(); ?></h3>
-						<p><?php echo esc_html( $fproduct->get_short_description() ); ?></p>
-					</a>
-					<a class="card-meta">
-						<p class="loop_price">$<?php echo $fproduct->get_price(); ?></p>
-						<a href="<?php echo get_permalink( $fproduct->get_id() ); ?>" class="loop_more">Read More</a>
-					</a>
-				</div>
-			<?php endforeach; ?>
-			</div>
-			<div class="d-grid gap-2">
-				<a class="btn-lg btn-primary click-extensions" href="/pricing/">
-				Browse our Extensions Catalog
+				<a class="card-img-top"  href="<?php echo get_permalink( $fproduct->get_id() ); ?>">
+					<!-- Image -->
+					<?php echo get_the_post_thumbnail( $fproduct->get_id(), 'shop_catalog', array('class' => 'card-img-top') ); ?>
 				</a>
+				<a class="card-body" href="#!">
+					<!-- Heading -->
+					<h3>
+						<?php echo $fproduct->get_title(); ?>
+					</h3>
+					<!-- Text -->
+					<p class="mb-0 text-muted">
+						<?php echo esc_html( $fproduct->get_short_description() ); ?>
+					</p>
+              </a>
+			  <a class="card-meta mt-auto" href="#!">
+					<!-- Divider -->
+					<hr class="card-meta-divider">
+					<!-- Price -->
+					<h6 class="text-uppercase text-muted me-2 mb-0">
+						$<?php echo $fproduct->get_price(); ?>
+					</h6>
+					<!-- Read more -->
+					<a class="h6 text-uppercase text-muted mb-0 ms-auto" href="<?php echo get_permalink( $fproduct->get_id() ); ?>">Read More</a>
+              </a>
+				</div>
 			</div>
+			<?php endforeach; ?>
 		</div>
+		<div class="text-center pb-5">
+			<button class="btn btn-primary lift  click-extensions" type="submit">
+			Browse our Extensions Catalog
+			</button>
+        </div>
 	</div>
 </section>
 
