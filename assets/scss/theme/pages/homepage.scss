@@ -37,8 +37,6 @@
 
 .benefits {
     .homepage-titles {
-        width: 320px;
-        height: 32px;
         font-weight: 800;
         font-size: 21px;
         line-height: 149.85%;
@@ -47,49 +45,105 @@
     }
 
     .benefits-description {
-        width: 318px;
-        height: 91px;
-        font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         color: rgba(26, 26, 87, 0.7);
     }
 }
 
-//Extentions
-.extentions-title {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 31px;
-    line-height: 143.33%;
-    color: rgba(26, 26, 87, 0.9);
-}
-.homepage-extentions {
+//Extensions
+
+.homepage-extensions {
     background-color: #E8F0F6;
 
-    .click-extensions {
+    a.click-extensions {
         background: linear-gradient(180deg, #3CA4D1 20%, #2F8DC1 100%);
         border-radius: 6px;
         color: #FFFFFF;
     }
+
+    .extensions-title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 31px;
+        line-height: 143.33%;
+        color: rgba(26, 26, 87, 0.9);
+    }
+
+    .extensions-divider {
+        border: 2px solid #F3F7FB;
+    }
+
+    .extensions-price {
+        color: #1A1A57;
+        font-size: 12px;
+    }
+
+    .extensions-more {
+        color: #3CA6D3;
+        font-size: 12px;
+    }
+
+    h3.extensions-subtitle {
+        color: #1A1A57;
+        font-size: 21px;
+        font-weight: 900;
+    }
+
+    .extensions-subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(26, 26, 87, 0.7);
+    }
+   
+}
+.interface {
+
+  
+    .interface-description {
+        font-size: 31px;
+        line-height: 143.33%;
+        color: rgba(26, 26, 87, 0.9);
+    }
+
+    .interface-image {
+        //width: 100%;
+    }
 }
 
 .intuitive {
-    .description-intuitive {
-        width: 457px;
+
+    .intuitive-description {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+        color: rgba(26, 26, 87, 0.7);
     }
 }
 
 .quick-add {
-    .description-quick-add {
-        width: 457px;
+    .quick-add-description {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+        color: rgba(26, 26, 87, 0.7);
     }
   
 }
 
 .versioning {
-    .description-versioning {
-        width: 457px;
+    .versioning-description {
+        width: 100%;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+        color: rgba(26, 26, 87, 0.7);
     }
 
+}
+
+.intuitive-title, .quick-add-title, .versioning-title {
+    font-weight: 900;
+    font-size: 31px;
+    color: rgba(26, 26, 87, 0.9);
 }
