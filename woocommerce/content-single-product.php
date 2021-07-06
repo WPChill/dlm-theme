@@ -255,7 +255,7 @@ if ( post_password_required() ) {
 				if ( ! isset( $_GET['changelog'] ) ) {
 					if ( '' != get_post_meta( $product->get_id(), 'dlm_video', true ) ) { ?>
 						<div class="dlm-product-video-container">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_post_meta( $product->get_id(), 'dlm_video', true ); ?>?vq=hd1080" frameborder="0" allowfullscreen></iframe>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/<?php echo get_post_meta( $product->get_id(), 'dlm_video', true ); ?>?vq=hd1080" frameborder="0" allowfullscreen></iframe>
 						</div>
 					<?php } ?>
 					<?php the_content(); ?>
