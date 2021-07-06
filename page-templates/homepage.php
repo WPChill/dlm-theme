@@ -1,6 +1,6 @@
 <?php
 /**
- * Login template form
+ * Homepage template form
  *
  * @package wpchill-theme
  */

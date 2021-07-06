@@ -1,0 +1,27 @@
+.contact {
+
+    .field {
+        border:none;
+        border-bottom: 1px solid #D7DEEF;
+    }
+
+    .agreement {
+        text-align: left;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(26, 26, 87, 0.7);
+    }
+
+   .title-contact {
+        color: #1A1A57;
+        font-weight: 900;
+        font-size: 52px;
+   }
+}
+
+.contact-send {
+    width: 100%;
+    background: linear-gradient(180deg, #3CA4D1 20%, #2F8DC1 100%);
+    border-radius: 6px;
+}
