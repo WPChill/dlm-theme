@@ -68,7 +68,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				 */
 
 				?>
-				<span class="h6 text-uppercase text-muted mb-0 ms-auto"><?php
+				<span class="h6 text-uppercase mb-0 ms-auto extensions-details-button"><?php
 					do_action( 'woocommerce_after_shop_loop_item' ); ?>
 				</span>
 			</div>

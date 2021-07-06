@@ -66,6 +66,14 @@ function wpchill_theme_register_scripts() {
 		'1.0',
 		true
 	);
+	if ( is_product() ) {
+		wp_enqueue_script( 
+			'wpchill-product-page-js', 
+			get_stylesheet_directory_uri() . '/assets/js/product-page.js', 
+			array( 'jquery' ), 
+			true 
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'wpchill_theme_register_scripts' );
 
@@ -126,16 +134,23 @@ function wpchill_theme_get_product_description() {
 
 	echo '<p class="mb-0 pb-6 extensions-description">' . esc_html( $product->get_short_description() ) . '</p>';
 }
+
 add_action( 'woocommerce_shop_loop_item_title', 'wpchill_theme_get_product_description', 20 );
-remove_action ('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+remove_action ('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 add_action ('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 15);
+// Remove breadcrumps from product page
+remove_action ( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+// Remove Product title from descripton
+remove_action ('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+// Remove Related products from single product page
+remove_action ('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 function woocommerce_template_loop_product_link_open() {
 	global $product;
 
 	$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
 
-	echo '<a href="' . esc_url( $link ) . '" class="card-img-top">';
+	echo '<a href="' . esc_url( $link ) . '" class="card-img-top text-decoration-none ">';
 }
 
 function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail', $deprecated1 = 0, $deprecated2 = 0 ) {
@@ -151,6 +166,50 @@ function wpchill_woocommerce_product_add_to_cart_text( $text ) {
 }
 
 add_filter( 'woocommerce_product_add_to_cart_text', 'wpchill_woocommerce_product_add_to_cart_text' );
+
+
+/**
+ * PRODUCT PAGE
+ * Stop WP from adding P tag automatically
+ */
+add_action( 'wp', function() {
+	if( is_product() ) {
+		remove_filter('the_content', 'wpautop');
+	}
+});
+
+// Display prices in variation select
+add_filter( 'woocommerce_variation_option_name', 'wpchill_display_price_in_variation_option_name' );
+
+function wpchill_display_price_in_variation_option_name( $term ) {
+	global $wpdb, $product;
+
+	// don't display in admin and checkout
+	if ( is_admin() || is_checkout() ) {
+		return $term;
+	}
+
+	if ( is_null( $product ) ) {
+		error_log( sprintf( "Product is NULL on %s", $term ), 0 );
+		return $term;
+	}
+
+	$lc_term = strtolower( $term );
+	$attributes = $product->get_available_variations();
+	if ( ! empty ( $attributes ) ) {
+		foreach ( $attributes as $attribute ) {
+			if ( $attribute['attributes']['attribute_pa_license'] == $lc_term ) {
+				if(!empty( $attribute['variation_description'] ) ) {
+					$term = $attribute['variation_description'];
+				} 
+				return '<span class="variation_description me-auto">' . wp_strip_all_tags( $term ) . '</span><span class="info">' . wp_strip_all_tags( wc_price( $attribute['display_price'] ) ) . ' / year</span>';
+			}
+		}
+
+	}
+
+	return $term;
+}
 
 /**
  * Redirect the user to our custom login page
