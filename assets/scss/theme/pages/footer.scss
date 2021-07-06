@@ -1,0 +1,46 @@
+.footer {
+    background-color: rgba(29, 105, 166, 0.1);
+}
+
+.footer-title {
+    font-weight: 900;
+    font-size: 31px;
+    color: rgba(26, 26, 87, 0.9);
+}
+
+.ask {
+    .footer-titles {
+        font-weight: 800;
+        font-size: 21px;
+        line-height: 149.85%;
+        letter-spacing: -0.01em;
+        color: #1A1A57;
+    }
+
+    .footer-description {
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(26, 26, 87, 0.7);
+    }
+}
+
+.links {
+    background-color: #1D69A6;;
+}
+
+.footer-link {
+    text-align : end;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
