@@ -1,0 +1,81 @@
+.cta-bundle {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    
+    .extension-bundle-link {
+        color: #FFAD48;
+        &:hover {
+            color: #FFAD48;
+        }
+    }
+}
+
+.extension-title {
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 60px;
+    letter-spacing: -0.01em;
+    color: rgba(26, 26, 87, 0.9);
+}
+
+.product .extension-short-description {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    text-align: center;
+    color: rgba(26, 26, 87, 0.7);
+}
+
+.extra-info {
+    table {
+        margin: 0 auto;
+    }
+}
+
+.extension-details-container {
+    .purchase-extension-title {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 149.85%;
+        text-align: center;
+        letter-spacing: -0.01em;
+    }
+
+    .purchase-extension-description {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 32px;
+    }
+
+    .bundle-button {
+        color: #1d69a6;
+        background-color: #fff;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 169.39%;
+    }
+
+    .feature-short-description, .feature-description {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(26, 26, 87, 0.7);
+    }
+
+    .feature-description h2 {
+        font-weight: 900;
+        font-size: 31px;
+        line-height: 36px;
+        letter-spacing: -0.01em;
+        color: rgba(26, 26, 87, 0.9);
+    }
+
+    .license-copy {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

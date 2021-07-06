@@ -82,14 +82,11 @@
 }
 
 .extensions-content {
-    a {
-        text-decoration: none;
-        h2 {
-            font-size: 21px;
-            line-height: 149.85%;
-            letter-spacing: -0.01em;
-            color: #1A1A57;
-        }
+    h2 {
+        font-size: 21px;
+        line-height: 149.85%;
+        letter-spacing: -0.01em;
+        color: #1A1A57;
     }
 
     .extensions-description {
@@ -98,5 +95,21 @@
         font-size: 16px;
         line-height: 24px;
         min-height: 170px;
+    }
+
+    .price, 
+    .extensions-details-button  {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.07em;
+    }
+
+    .price {
+        color: #1A1A57;
+    }
+
+    .extensions-details-button {
+        color: #3CA6D3;
     }
 }
