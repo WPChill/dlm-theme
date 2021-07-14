@@ -1,0 +1,244 @@
+.checkout-template {
+    color: #1A1A57;
+
+    .navbar, 
+    .checkout-header,
+    footer {
+        display: none;
+    }
+
+    .wpchill-checkout-logo {
+        width: 10%;
+    }
+
+    .checkout-headings {
+        background-color: rgba(232, 240, 246, 0.5);
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.01em;
+        border-top: 4px solid #3CA6D3;
+        border-radius: 3px;
+    }
+
+    .woocommerce-form-login-toggle {
+        background-color: #1D69A6;
+        border-radius: 5px;
+
+        .icon-account {
+            display: inline-block;
+            vertical-align: middle;
+            height: 40px;
+            width: 40px;
+            margin-right: 25px;
+        }
+        .woocommerce-info {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 32px;
+            border-top: none;
+            background-color: transparent;
+            vertical-align: middle;
+
+            &:before {
+                content: "";
+            }
+
+            .showlogin {
+                color: #ffad48;
+            }
+        }
+    }
+
+    .woocommerce-checkout {
+        font-size: 18px;
+        line-height: 32px;
+
+        .woocommerce-checkout-review-order-table {
+            border: none;
+        }
+
+        table.shop_table {
+            border: none;
+            margin: 0;
+        }
+
+        .woocommerce-checkout-review-order-table {
+            padding: 0 1rem;
+        }
+        
+        .product-name {
+            font-weight: 600;
+            line-height: 32px;
+        }
+
+        .subscription-price, .recurring-total > td, .cart-total > td {
+            font-weight: bold;
+            color: #1D69A6;
+        }
+
+        #payment {
+            background: none;
+        }
+
+        .product-total, .recurring-total > td, .cart-total > td {
+            text-align: right;
+        }
+
+        .cart_totals {
+            background-color: rgba(232, 240, 246, 0.5);
+            padding: 1.5rem;
+            th {
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 36px;
+                letter-spacing: -.01em;
+                padding: 0;
+            }
+        }
+
+        .wpchill-coupon {
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+            p {
+                margin: 0;
+            }
+        }
+
+        .woocommerce-form-coupon {
+            border: none;
+            margin: 0;
+            padding:0;
+            .form-row {
+                input {
+                    border: none;
+                    border-bottom: 1px solid #D7DEEF;
+                    padding: 10px 0;
+                }
+                button {
+                    background: linear-gradient(180deg,#3ca4d1 20%,#2f8dc1);
+                    color: #fff;
+                    font-weight: normal;
+                    padding: 12px
+                }
+            }
+        }
+
+        .wc_payment_methods {
+            border: none;
+            li.wc_payment_method {
+                .payment_box {
+                    background-color: transparent !important;
+                    margin: 0 !important;
+                    &:before {
+                        display: none !important;
+                    }
+                }
+
+                > label {
+                    display: inline;
+                    font-weight: 700;
+                    font-size: 21px;
+                    color: #1A1A57B2;
+                }
+
+                .form-row {
+                    > label {
+                        color: #6B7C93;
+                        font-size: 17px;
+                        line-height: 29px;
+                    }
+                }
+
+                &.payment_method_stripe {
+                
+                    img {
+                        display: none;
+                    }
+        
+                    > label {
+                        &:after {
+                            width: 210px;
+                            height: 25px;
+                            float: right;
+                            background: url(../images/stripe.png) no-repeat 50% 50%;
+                            background-size: cover;
+                            display: inline-block;
+                            content: '';
+                        }
+                    }
+
+                    .wc-stripe-elements-field {
+                        border: none;
+                        border-bottom: 1px solid #D7DEEF;
+                    }
+
+                    .form-row {
+                        margin: 0 !important;
+                        padding-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-billing-fields, .woocommerce-account-fields {
+            .form-row {
+                margin-bottom: 10px;
+            }
+        }
+
+        .checkout-total {
+            h3 {
+                display: inline;
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 36px;
+                letter-spacing: -.01em;
+                padding: 0;
+            }
+            .wpchill-purchase-total {
+                float: right;
+                font-weight: 700;
+                color: #1d69a6;
+            }
+            .button {
+                width: 100%;
+                background: linear-gradient(180deg, #3CA4D1 20%, #2F8DC1 100%);
+                font-weight: normal;
+                padding: 15px;
+            }
+        }
+
+        #billing_postcode_field {
+            float: right;
+            width: 47%;
+            overflow: visible;
+            clear: none;
+        }
+    }
+    
+    .woocommerce-form-login {
+        margin: 0 !important;
+        border: none !important;
+        input {
+            border: none;
+            border-bottom: 1px solid #D7DEEF;
+        }
+    }
+
+    .checkout-footer {
+        h4 {
+            font-weight: bold;
+        }
+        h4, p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #1A1A57;
+        }
+    }
+}
+

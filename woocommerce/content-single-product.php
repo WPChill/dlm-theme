@@ -78,7 +78,7 @@ if ( post_password_required() ) {
 	<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 		<div class="extension-short-description mb-7"><?php esc_html_e( the_excerpt() ); ?></div>
 		<div class="row extension-details-container">
-			<div class="dlm-extension-detail-info col-12 col-md-12 col-lg-4 order-md-2">
+			<div class="dlm-extension-detail-info col-12 col-md-12 col-lg-4 order-md-2 pb-6">
 				<div class="dlm-extension-info-box dlm-extension-info-box-bundle bg-primary text-white text-center p-8">
 					<span><img class="icon mb-4" width="35" height="30" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/buy.png" /></span>
 					<h3 class='purchase-extension-title'><?php esc_html_e('Purchase Extension', 'wpchill-theme'); ?></h3>

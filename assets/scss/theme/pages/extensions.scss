@@ -113,3 +113,20 @@
         color: #3CA6D3;
     }
 }
+
+.dlm-extension-info-box {
+    .variations {
+        label {
+            width: 90%;
+            .variation_description {
+                display: inline-block;
+                text-align: left;
+            }
+            .info {
+                display: inline-block;
+                text-align: right;
+                float: right;
+            }
+        }
+    }
+}

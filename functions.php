@@ -212,6 +212,65 @@ function wpchill_display_price_in_variation_option_name( $term ) {
 }
 
 /**
+ * CHECKOUT PAGE
+ */
+
+add_filter( 'woocommerce_checkout_fields', 'wpchill_checkout_fields' );
+function wpchill_checkout_fields( $fields ) {
+	$fields['billing']['billing_email']['priority'] = 1;
+	$fields['billing']['billing_country']['priority'] = 40;
+
+    // Remove Billing fields
+    unset( $fields['billing']['billing_company'] );
+    unset( $fields['billing']['billing_phone'] );
+    unset( $fields['billing']['billing_state'] );
+    unset( $fields['billing']['billing_address_1'] );
+    unset( $fields['billing']['billing_address_2'] );
+    unset( $fields['billing']['billing_city'] );
+
+	// Remove Fields Labels
+	unset( $fields['billing']['billing_email']['label'] );
+	unset( $fields['billing']['billing_first_name']['label'] );
+    unset( $fields['billing']['billing_last_name']['label'] );
+	unset( $fields['billing']['billing_postcode']['label'] );
+	unset( $fields['billing']['billing_vat_number']['label'] );
+	unset( $fields['billing']['billing_country']['label'] );
+
+	// Add Placeholders
+	$fields['billing']['billing_email']['placeholder'] = 'Email';
+	$fields['billing']['billing_first_name']['placeholder'] = 'First Name';
+    $fields['billing']['billing_last_name']['placeholder'] = 'Last Name';
+	$fields['billing']['billing_postcode']['placeholder'] = 'Postcode/ZIP';
+	$fields['billing']['billing_vat_number']['placeholder'] = 'VAT Number (Optional)';
+	$fields['billing']['billing_country']['placeholder'] = 'Country/Region';
+
+	// Add Bootstrap form css classes
+	foreach ( $fields as &$fieldset ) {
+        foreach ( $fieldset as &$field ) {
+            $field['input_class'][] = 'form-control form-control-flush';
+        }
+	}
+	$fields['billing']['billing_country']['class'][0] = 'form-row-first';
+	$fields['billing']['billing_postcode']['class'][0] = 'form-row-last';
+
+    return $fields;
+}
+
+add_action( 'woocommerce_checkout_order_review', function() {
+	wc_get_template( 'cart/checkout-totals.php' );
+	wc_get_template(
+		'checkout/form-coupon.php',
+		array(
+			'checkout' => WC()->checkout(),
+		)
+	);
+}, 15 );
+
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action( 'woocommerce_checkout_before_form', 'woocommerce_checkout_payment' );
+
+/**
  * Redirect the user to our custom login page
  */
 // function wpchill_redirect_login_page() {
