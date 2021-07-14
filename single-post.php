@@ -1,10 +1,13 @@
 <?php
 /**
- * Search template
+ * Single post template
  *
  * @package wpchill-theme
  */
 
+ /*
+* Template Name: Single Post Template
+*/
 get_header(); ?>
 <?php get_template_part( 'template-parts/element', 'page-header' ); ?>
 

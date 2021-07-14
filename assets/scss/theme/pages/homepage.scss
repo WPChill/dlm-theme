@@ -1,9 +1,9 @@
+.button-background {
+    background: linear-gradient(180deg, #3CA4D1 37.92%, #1D69A6 100%);
+    border-radius: 6px;
+    margin-top: 24px;
+}
 .homepage-header {
-    .homepage-click {
-        background: linear-gradient(180deg, #3CA4D1 37.92%, #1D69A6 100%);
-        border-radius: 6px;
-        margin-top: 24px;
-    }
 
     .intro {
         font-style: normal;
@@ -55,12 +55,6 @@
 
 .homepage-extensions {
     background-color: #E8F0F6;
-
-    a.click-extensions {
-        background: linear-gradient(180deg, #3CA4D1 20%, #2F8DC1 100%);
-        border-radius: 6px;
-        color: #FFFFFF;
-    }
 
     .extensions-title {
         font-style: normal;

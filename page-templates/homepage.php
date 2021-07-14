@@ -18,8 +18,8 @@
 			<div class="col-xxl-6 col-md-6 text-md-left mb-xs-3 mb-md-0 ">
 				<h1 class="lh-1 mb-3 intro"> Introducing </br> Download Monitor</h1>
 				<p  class="mb-4 description"><?php esc_html_e('A WordPress plugin which provides an intuitive UI for uploading and managing downloadable files, inserting download links into posts & logging downloads.', 'wpchill-theme'); ?></p>
-				<div class="text-center pb-5">
-					<a class="btn btn-primary lift  homepage-click" href="/pricing/">
+				<div class="pb-5 text-left">
+					<a class="btn btn-primary lift button-background homepage-click" href="/pricing/">
 					View pricing
 						<i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
 					</a>
@@ -136,10 +136,10 @@ $fp_ids   = $fp_query->query( array(
 				</div>
 				</div>
 			</div>
-			<?php endforeach; ?>
+		<?php endforeach; ?>
 		</div>
 		<div class="text-center pb-10">
-			<a class="btn btn-primary lift click-extensions" href="/extensions/">
+			<a class="btn btn-primary lift button-background click-extensions" href="/extensions/">
 			Browse our Extensions Catalog
 			</a>
         </div>
@@ -151,10 +151,10 @@ $fp_ids   = $fp_query->query( array(
 	<div class="container interface">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-12 col-md-6 order-md-1">
-				<div class="float-end d-none d-md-block">
+				<div class="position-relative h-100 vw-50 float-end  d-md-block">
 					<div class="position-relative d-md-block aos-init aos-animate">
 						<div class="card">
-							<img class="interface-image"  src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/interface.png">
+							<img class="interface-image" style="width:100%"   src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/interface.png">
 						</div>
 					</div>
 				</div>
@@ -175,7 +175,7 @@ $fp_ids   = $fp_query->query( array(
 		<div class="row align-items-center justify-content-between">
 			<div class="col-12 col-md-6 order-md-2 aos-init aos-animate">
 				<div class="card">
-					<img class="card options-image-intuitive" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/intuitive.png">
+					<img class="card options-image-intuitive" style="width:100%"  src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/intuitive.png">
 				</div>
 			</div>
 			<div class="col-12 col-md-6 order-md-1 aos-init aos-animate ">
@@ -198,7 +198,7 @@ $fp_ids   = $fp_query->query( array(
 			</div>
 			<div class="col-12 col-md-6 order-md-1 aos-init aos-animate">
 				<div class="card">
-					<img class="options-image-quick-add" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/quick-add.png">
+					<img class="options-image-quick-add" style="width:100%"  src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/quick-add.png">
 				</div>
 			</div>
 		</div>
@@ -210,7 +210,7 @@ $fp_ids   = $fp_query->query( array(
 		<div class="row align-items-center justify-content-between">
 			<div class="col-12 col-md-6 order-md-2 aos-init aos-animate">
 				<div class="card">
-					<img class="options-image-versioning" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/versioning.png">
+					<img class="options-image-versioning" style="width:100%"  src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/versioning.png">
 				</div>
 			</div>
 			<div class="col-12 col-md-6 order-md-1 aos-init aos-animate ">

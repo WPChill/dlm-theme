@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<form class="rounded shadow mb-4" role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<form class="rounded shadow mb-4 mt-4" role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<div class="input-group input-group-lg">
 
 						<!-- Text -->

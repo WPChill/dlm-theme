@@ -11,36 +11,51 @@
 ?>
 <?php get_header(); ?>
 
+<section class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover" style="">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+                <!-- Heading -->
+                <h1 class="display-2 fw-bold text-white">
+                We’re Here to Help.
+                </h1>
+                <!-- Text -->
+                <p class="lead text-white-75 mb-0">
+                We always want to hear from you! Let us know how we can best help you and we'll do our very best.
+                </p>
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+<div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x text-light">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>     
+    </div>
+</div>
+<section class="pt-8 pt-md-11 pb-8">
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+            <!-- Heading -->
+            <h2 class="fw-bold">
+              Let us hear from you directly!
+            </h2>
+            <!-- Text -->
+            <p class="fs-lg text-muted mb-7 mb-md-9">
+              We always want to hear from you! Let us know how we can best help you and we'll do our very best.
+            </p>
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
 <section>
     <div class="container contact">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 text-center pt-10 pb-10">
-                <h1 class="pb-5 title-contact">Contact</h1>
-                <form>
-                    <div class="mb-3">
-                        <input type="name" class="form-control form-control-flush field" placeholder="Your name">
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control form-control-flush field" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
-                    </div>
-                    <div class="mb-3">
-                        <input type="subject" class="form-control form-control-flush field" placeholder="Subject">
-                    </div>
-                    <div class="mb-3">
-                        <textarea type="textarea" class="form-control form-control-flush field" placeholder="Message"></textarea>
-                    </div>
-                    
-                    
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label agreement" for="exampleCheck1">I understand and agree that the data I entered in this form will be shared with and stored at Help Scout. More information about your data can be read in our <a> Privacy Policy </a>. </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-lg contact-send">Send message </button>
-                </form>
-            </div>
+                <h1 class="pb-5 title-contact text-center">Contact</h1>
+                <?php echo do_shortcode('[contact-form-7 id="29898" title="Contact form 1"]');?>
         </div>
     </div>
 </section>
-
 
 <?php get_footer(); ?>

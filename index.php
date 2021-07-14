@@ -8,10 +8,10 @@
 ?>
 <?php get_header(); ?>
 <?php get_search_form(); ?>
+
 <article>
 	<div class="container">
 		<div class="row">
-
 
 			<?php
 			if ( have_posts() ) {
