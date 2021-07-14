@@ -7,7 +7,15 @@
 
 ?>
 <?php get_header(); ?>
-<?php get_template_part( 'template-parts/element', 'page-header' ); ?>
+<?php get_template_part( 'template-parts/element', 'page-header' );
+$class = '';
+if ( is_checkout() ) {
+	$class = 'checkout-header';
+} elseif ( is_account_page() ) {
+	$class = 'myaccount-header';
+}
+
+?>
 
 <div id="main" class="main">
 	<div class="container">
@@ -18,7 +26,7 @@
 				?>
 		<article>
 
-			<section class="pt-8 pt-md-11">
+			<section class="pt-8 pt-md-11 <?php echo esc_html( $class ) ?>">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-10 col-lg-9 col-xl-8">
@@ -45,13 +53,13 @@
 			</section>
 
 			<!-- Content -->
-				<?php get_template_part( 'template-parts/element', 'page-content' ); ?>
+			<?php get_template_part( 'template-parts/element', 'page-content' ); ?>
 
 		</article>
 
 	</div>
 </div>
-				<?php
+		<?php
 			endwhile;
 		};
 		?>

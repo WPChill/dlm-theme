@@ -24,7 +24,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body data-aos-easing="ease-out-quad" data-aos-duration="700" data-aos-delay="0">
+<body data-aos-easing="ease-out-quad" data-aos-duration="700" data-aos-delay="0" class="<?php echo ( is_checkout() ? 'checkout-template' : '' ); ?>">
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -83,3 +83,29 @@
 		</div>
 
 	</nav>
+
+	<?php if ( is_account_page() ): $current_user = wp_get_current_user(); ?>
+		<header class="bg-primary pt-9 pb-11 d-none d-md-block">
+			<div class="container-md">
+				<div class="row align-items-center">
+				<div class="col">
+
+					<!-- Heading -->
+					<h1 class="fw-bold text-white mb-2"><?php esc_html_e( 'Account Settings', 'wpchill-theme' ) ?></h1>
+
+					<!-- Text -->
+					<p class="fs-lg text-white-75 mb-0">
+					<?php esc_html_e( 'Settings for', 'wpchill-theme' ) ?> <a class="text-reset" href="mailto:<?php echo $current_user->user_email ?>"><?php echo $current_user->user_email ?></a>
+					</p>
+
+				</div>
+				<div class="col-auto">
+
+					<!-- Button -->
+					<a href="<?php echo wp_logout_url(); ?>" class="btn btn-sm btn-gray-300-20"><?php esc_html_e( 'Log out', 'wpchill-theme' ) ?></a>
+
+				</div>
+				</div> <!-- / .row -->
+			</div> <!-- / .container -->
+			</header>
+	<?php endif; ?>

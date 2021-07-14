@@ -1,0 +1,59 @@
+// Login page
+.myaccount-header {
+    display: none;
+}
+.woocommerce form.login {
+    margin: 0 auto;
+    border: none;
+
+    .show-password-input {
+        opacity: 0.5;
+    }
+
+    .woocommerce-button {
+        width: 100%;
+        background: linear-gradient(180deg,#3ca4d1 37.92%,#1d69a6);
+    }
+}
+
+// MyAccount page
+.woocommerce .account-navigation {
+    .list-item.is-active {
+        color: #161c2d !important;
+        > a::before {
+            display: block;
+            border-right: 2px solid #1d69a6;
+            bottom: 0;
+            content: "";
+            left: -2rem;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
+
+.woocommerce {
+    .address-form h3 {
+        font-size: 17px;
+        font-weight: 400;
+    }
+    
+    .address-form .woocommerce-address-fields label {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .address-form span.select2-selection{
+        color: #161c2d;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #f1f4f8;
+        border-radius: .375rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    button.account-details-button,
+    button.save-address-button {
+        background: linear-gradient(180deg,#3ca4d1 37.92%,#1d69a6);
+    }
+}

@@ -71,7 +71,16 @@
 		</div>
 	</div>
 </section>
-	</footer>
+
+</footer>
+
+<?php if ( is_checkout() ) : ?>
+<section class="mt-12">
+	<div class="container-full p-0">
+		<p class="text-center text-white bg-primary pb-4 pt-4 mb-0"><?php esc_html_e( 'Download Monitor is a WPChill plugin', 'woocommerce' ); ?></p>
+	</div>
+<section>
+<?php endif; ?>
 
 	<?php wp_footer(); ?>
 
