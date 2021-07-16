@@ -30,8 +30,10 @@ get_header(); ?>
                         <div class="icon-circle bg-primary text-white mb-5">
                             <i class="fe fe-users"></i>
                         </div>
-                        <h4 class="fw-bold"><?php echo $term->name; ?></h4>
+                        <h4 class="fw-bold text-black"><?php echo $term->name; ?></h4>
+                        <p class="text-gray-700 mb-5">
                         <?php echo $term->description; ?>
+                        </p>
                         <span class="badge rounded-pill bg-dark-soft">
                             <span class="h6 text-uppercase">
                                 <?php echo $term->count . ' ENTRIES'; ?>
