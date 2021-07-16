@@ -53,17 +53,17 @@
 				<div class="row">
 					<div class="col-12 col-md-4">
 						<a href="/my-account/edit-address/" class="mb-md-0 link">
-						My Account
+						<?php esc_html_e('My account', 'wpchill-theme'); ?>
 						</a>
 					</div>
 					<div class="col-12 col-md-4">
 						<a href="/terms-conditions" class="mb-md-0 link">
-						Terms & Conditions
+						<?php esc_html_e('Terms & Conditions', 'wpchill-theme'); ?>
 						</a>
 					</div>
 					<div class="col-12 col-md-4">
 						<a href="/privacy-policy" class="mb-md-0 link">
-						Privacy Policy
+						<?php esc_html_e('Privacy Policy', 'wpchill-theme'); ?>
 						</a>
 					</div>
 				</div>
