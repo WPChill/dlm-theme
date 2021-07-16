@@ -21,7 +21,6 @@ get_header(); ?>
 		<article>
 
 			<section class="pt-8 pt-md-11">
-
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-10 col-lg-9 col-xl-8">
@@ -29,7 +28,7 @@ get_header(); ?>
 						<figure class="figure mb-7">
 
 							<!-- Image -->
-							<img class="figure-img img-fluid rounded lift lift-lg" src="<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>" >
+							<img class="figure-img img-fluid rounded lift lift-lg" src="<?php //echo esc_attr( get_the_post_thumbnail_url() ); ?>" >
 
 							<!-- Caption -->
 							<figcaption class="figure-caption text-center">
@@ -41,6 +40,7 @@ get_header(); ?>
 							<!-- Heading -->
 
 							<?php echo the_title( '<h1 class="display-4 text-center">', '</h1>' ); ?>
+							<?php wpchill_base_theme_author(); ?>
 
 						</div>
 					</div> <!-- / .row -->

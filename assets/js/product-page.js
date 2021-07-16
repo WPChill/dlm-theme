@@ -71,12 +71,12 @@
         });
         $('#extension-only').on('click', function(e) {
             e.preventDefault();
-            $('.dlm-extension-info-box-bundle').hide();
-            $('.dlm-extension-info-box-license').show();
+            $('.wpchill-extension-info-box-bundle').hide();
+            $('.wpchill-extension-info-box-license').show();
         });
 		// Sticky sidebar
 		if (window.matchMedia('(min-width: 992px)').matches && $(document).height() > 2000) {
-			$.stickysidebarscroll(".dlm-extension-detail-info",{offset: {top: 10, bottom: 450}});
+			$.stickysidebarscroll(".wpchill-extension-detail-info",{offset: {top: 10, bottom: 450}});
 		}
     });
 	

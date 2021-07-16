@@ -78,15 +78,15 @@ if ( post_password_required() ) {
 	<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 		<div class="extension-short-description mb-7"><?php esc_html_e( the_excerpt() ); ?></div>
 		<div class="row extension-details-container">
-			<div class="dlm-extension-detail-info col-12 col-md-12 col-lg-4 order-md-2 pb-6">
-				<div class="dlm-extension-info-box dlm-extension-info-box-bundle bg-primary text-white text-center p-8">
+			<div class="wpchill-extension-detail-info col-12 col-md-12 col-lg-4 order-md-2 pb-6">
+				<div class="wpchill-extension-info-box wpchill-extension-info-box-bundle bg-primary text-white text-center p-8">
 					<span><img class="icon mb-4" width="35" height="30" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/buy.png" /></span>
 					<h3 class='purchase-extension-title'><?php esc_html_e('Purchase Extension', 'wpchill-theme'); ?></h3>
 					<p class='purchase-extension-description mb-0'><?php esc_html_e( 'Get all of our extensions, save money, and keep your files organized.', 'wpchill-theme' ); ?></p><br>
-					<a href="/pricing" class="bundle-button btn btn-primary mb-2 dlm-purchase-sidebar-button"><?php esc_html_e( 'BUNDLE & SAVE', 'wpchill-theme' ); ?></a><br>
+					<a href="/pricing" class="bundle-button btn btn-primary mb-2 wpchill-purchase-sidebar-button"><?php esc_html_e( 'BUNDLE & SAVE', 'wpchill-theme' ); ?></a><br>
 					<span>...<?php esc_html_e( 'or,', 'wpchill-theme' ); ?> <a href="#" id="extension-only" class="text-white"><?php esc_html_e( 'just purchase this extension', 'wpchill-theme' ); ?></a>.</span>
 				</div>
-				<div class="dlm-extension-info-box dlm-extension-info-box-license bg-primary text-white p-8" style="display:none">
+				<div class="wpchill-extension-info-box wpchill-extension-info-box-license bg-primary text-white p-8" style="display:none">
 					<?php
 					if ( $variable ) {
 						$license_label = 'License';
@@ -209,7 +209,7 @@ if ( post_password_required() ) {
 						if ( is_integer( $api_id ) && $api_id > 0 ) {
 
 							?>
-							<div class="dlm-extension-info-box dlm-extension-info-box-details extra-info">
+							<div class="wpchill-extension-info-box wpchill-extension-info-box-details extra-info">
 								<table width="100" cellpadding="0" cellspacing="0">
 									<?php
 
@@ -241,7 +241,7 @@ if ( post_password_required() ) {
 				$documentation_slug = get_post_meta( get_the_ID(), 'documentation_slug', true );
 				if ( '' !== $documentation_slug ) {
 					?>
-					<div class="dlm-extension-info-box dlm-extension-info-box-documentation read-doc">
+					<div class="wpchill-extension-info-box wpchill-extension-info-box-documentation read-doc">
 						<a href="/kb/<?php echo $documentation_slug; ?>/" class=""
 						title="<?php echo get_the_title() . ' Documentation'; ?>">Read Documentation</a>
 					</div>
@@ -250,12 +250,12 @@ if ( post_password_required() ) {
 				?>
 				</div>
 			</div>
-			<div class="dlm-extension-detail-copy col-12 col-md-12 col-lg-8 order-md-1">
+			<div class="wpchill-extension-detail-copy col-12 col-md-12 col-lg-8 order-md-1">
 			<?php
 				if ( ! isset( $_GET['changelog'] ) ) {
-					if ( '' != get_post_meta( $product->get_id(), 'dlm_video', true ) ) { ?>
-						<div class="dlm-product-video-container">
-							<iframe width="100%" height="400" src="https://www.youtube.com/embed/<?php echo get_post_meta( $product->get_id(), 'dlm_video', true ); ?>?vq=hd1080" frameborder="0" allowfullscreen></iframe>
+					if ( '' != get_post_meta( $product->get_id(), 'wpchill_video', true ) ) { ?>
+						<div class="wpchill-product-video-container">
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/<?php echo get_post_meta( $product->get_id(), 'wpchill_video', true ); ?>?vq=hd1080" frameborder="0" allowfullscreen></iframe>
 						</div>
 					<?php } ?>
 					<?php the_content(); ?>
