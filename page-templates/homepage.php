@@ -19,7 +19,7 @@
 				<h1 class="lh-1 mb-3 intro"> Introducing </br> Download Monitor</h1>
 				<p  class="mb-4 description"><?php esc_html_e('A WordPress plugin which provides an intuitive UI for uploading and managing downloadable files, inserting download links into posts & logging downloads.', 'wpchill-theme'); ?></p>
 				<div class="pb-5 text-left">
-					<a class="btn btn-primary lift button-background homepage-click" href="/pricing/">
+					<a class="btn btn-primary lift button-background homepage-click" href="/pricing">
 					View pricing
 						<i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
 					</a>

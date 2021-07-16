@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-12 col-md-4 ask">
 				<!-- Heading -->
-				<a class="footer-titles"><?php esc_html_e('Forum.', 'wpchill-theme'); ?></a>
+				<a href="/blog" class="footer-titles"><?php esc_html_e('Forum.', 'wpchill-theme'); ?></a>
 				<!-- Text -->
 				<p class="mb-6 mb-md-0 footer-description">
 				For premium extension support simply reply to your purchase email. If you're looking for support for Download Monitor itself please use the community forum.
@@ -52,24 +52,24 @@
 			<div class="col-12 col-md-6">
 				<div class="row">
 					<div class="col-12 col-md-4">
-						<a href="" class="mb-md-0 link">
-						My Account
+						<a href="/my-account/edit-address/" class="mb-md-0 link">
+						<?php esc_html_e('My account', 'wpchill-theme'); ?>
 						</a>
 					</div>
 					<div class="col-12 col-md-4">
-						<a href="" class="mb-md-0 link">
-						Terms & Conditions
+						<a href="/terms-conditions" class="mb-md-0 link">
+						<?php esc_html_e('Terms & Conditions', 'wpchill-theme'); ?>
 						</a>
 					</div>
 					<div class="col-12 col-md-4">
-						<a href="" class="mb-md-0 link">
-						Privacy Policy
+						<a href="/privacy-policy" class="mb-md-0 link">
+						<?php esc_html_e('Privacy Policy', 'wpchill-theme'); ?>
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-12 col-md-6 ">
-				<a href="" class="link mr-0">
+				<a href="/pricing/" class="link mr-0">
 				Download Monitor is a WPChill plugin
 				</a>
 			</div>
