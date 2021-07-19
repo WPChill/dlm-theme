@@ -40,7 +40,7 @@ get_header(); ?>
 							<!-- Heading -->
 
 							<?php echo the_title( '<h1 class="display-4 text-center">', '</h1>' ); ?>
-							<?php wpchill_base_theme_author(); ?>
+							<?php wpchill_base_theme_author(true); ?>
 
 						</div>
 					</div> <!-- / .row -->

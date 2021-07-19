@@ -81,25 +81,55 @@ if ( ! function_exists( 'wpchill_base_theme_author' ) ) {
 	/**
 	 * Displays the author box
 	 */
-	function wpchill_base_theme_author() {
-
+	function wpchill_base_theme_author( $inline = false ) {
+		$post_date = get_the_date( 'l F j, Y' );
 		echo '<div class="row align-items-center py-5 border-top border-bottom">';
 			echo '<div class="col-auto"></div>';
 		// TO DO - ADD AVATAR!
 			echo '<div class="col ms-n5">';
-				echo '<h6 class="text-uppercase mb-0">';
-				echo get_the_author();
-				echo '</h6>';
-				echo '<div class="author-description">';
-					echo '<time class="fs-sm text-muted" datetime="2019-05-20">';
-					$post_date = get_the_date( 'l F j, Y' );
-					echo esc_html( $post_date );
-					echo '</time>';
-				echo '</div>';
+				if ($inline) {
+					echo '<span class="text-uppercase">' . get_the_author() . '</span>';
+					echo '<span class="author-description" style="float">';
+					echo '<time class="fs-sm text-muted" datetime="2019-05-20">' . esc_html__('Published on ', 'wpchill-theme') . esc_html( $post_date ) . '</time>';
+					echo '</span>';
+				} else {
+					echo '<h6 class="text-uppercase mb-0">' . get_the_author() . '</h6>';
+					echo '<div class="author-description">';
+					echo '<time class="fs-sm text-muted" datetime="2019-05-20">' . esc_html( $post_date ) . '</time>';
+					echo '</div>';
+				}
 		// Social links.
 			echo '</div>';
 		echo '</div>';
 
+	}
+}
+
+
+if ( ! function_exists( 'wpchill_base_theme_categories' ) ) {
+	/**
+	 * Displays the category box
+	 */
+	function wpchill_base_theme_categories( $classes = ' pb-7 pb-md-10' ) {
+		$categories = get_categories(); ?>
+		<div class="container <?php echo $classes ?>">
+			<div class="row">
+				<div class="col-12">
+					<div class="row align-items-center">
+						<div class="col-auto">
+							<h6 class="fw-bold text-uppercase text-muted mb-0"><?php esc_html_e('Categories:', 'wpchill-theme') ?></h6>
+						</div>
+						<div class="col ms-n5">
+							<?php foreach ( $categories as $category ): ?>
+								<a class="badge rounded-pill bg-secondary-soft" href="<?php echo get_category_link($category) ?>">
+									<span class="h6 text-uppercase"><?php esc_html_e($category->name) ?></span>
+								</a>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <?php
 	}
 }
 
@@ -158,7 +188,18 @@ function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail', $de
 
 	$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 
-	return $product ? $product->get_image( $image_size, array( 'class' => 'card-img-top' ) ) : '';
+	$image = '';
+	if ( $product ) {
+		$image .= $product->get_image( $image_size, array( 'class' => 'card-img-top', 'style' => 'height:auto' ) );
+		$image .= 
+		'<div class="position-relative">
+			<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+				<svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>
+			</div>
+		</div>';
+	}
+	
+	return $image;
 }
 
 function wpchill_woocommerce_product_add_to_cart_text( $text ) {

@@ -35,14 +35,16 @@ get_header( 'shop' );
 				<div class="row align-items-center">
 					<div class="col-12 col-md-7 col-lg-6 order-md-1 page-title-container">
 					<h1 class="display-4 text-left text-white woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-						<p class="lead text-left text-md-start mb-6 mb-lg-8">Extend the core Download Monitor plugin with it’s powerful extensions. All extensions come with one year of updates and support</p>
+						<p class="lead text-left text-md-start mb-6 mb-lg-8"><?php esc_html_e( 'Extend the core Download Monitor plugin with it’s powerful extensions. All extensions come with one year of updates and support', 'wpchill-theme' ) ?></p>
 					</div>
-					<div class="col-12 col-md-5 col-lg-6 order-md-2 text-center bundle-container">
-						<div class="icon text-primary mb-3">
-							<img width="50" height="45" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/box.png">
+					<div class="col-12 col-md-4 col-lg-4 offset-md-1 order-md-2 text-center bundle-container">
+						<div class="p-8">
+							<div class="icon text-primary mb-3">
+								<img width="50" height="45" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/box.png">
+							</div>
+							<p class="text-white bundle-price"><?php esc_html_e( 'Get $624 worth of extensions for just $125 with our Extension Bundle!', 'wpchill-theme' ) ?></p>
+							<a href="/extensions/extension-bundle/" class="bundle-button btn btn-primary"><?php esc_html_e( 'Learn More', 'wpchill-theme' ) ?></a>
 						</div>
-						<p class="text-white bundle-price">Get $624 worth of extensions for just $125 with our Extension Bundle!</p>
-						<a href="/extensions/extension-bundle/" class="bundle-button btn btn-primary">Learn More</a>
 					</div>
 				</div>
 			</div>

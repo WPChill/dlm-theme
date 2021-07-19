@@ -84,10 +84,10 @@
 
 	</nav>
 
-	<?php if ( is_account_page() ): $current_user = wp_get_current_user(); ?>
+	<?php if ( is_account_page() && is_user_logged_in() ): $current_user = wp_get_current_user(); ?>
 		<header class="bg-primary pt-9 pb-11 d-none d-md-block">
 			<div class="container-md">
-				<div class="row align-items-center">
+				<div class="row align-items-center m-2">
 				<div class="col">
 
 					<!-- Heading -->

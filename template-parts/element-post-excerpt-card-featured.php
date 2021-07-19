@@ -14,7 +14,7 @@
 		<div class="col-12">
 			<!-- Badge -->
 			<span class="badge rounded-pill bg-light badge-float badge-float-inside">
-				<span class="h6 text-uppercase">Featured</span>
+				<span class="h6 text-uppercase"><?php esc_html_e( 'Featured', 'wpchill-theme' ); ?></span>
 			</span>
 		</div>
 		<?php if ( has_post_thumbnail() ) : ?>

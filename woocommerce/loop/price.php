@@ -22,9 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 ?>
 
-<hr class="card-meta-divider">
-
-<div class="card-meta mt-auto">
+<div class="card-meta mt-auto p-0">
+	<hr class="card-meta-divider">
 	<?php if ( $price_html = $product->get_price() ) : ?>
 		<span class="price me-2 mb-0">$<?php echo $price_html; ?></span>
 	<?php endif; ?>

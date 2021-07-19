@@ -12,7 +12,8 @@
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-10 col-lg-9 col-xl-8">
 				<?php the_content(); ?>
-				<?php wpchill_base_theme_author(); ?>
+				<?php wpchill_base_theme_categories('pb-6 pt-6 border-top') ?>
+				<?php wpchill_base_theme_author(true); ?>
 			</div>
 		</div>
 	</div>
