@@ -68,8 +68,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-md-6 ">
-				<a href="/pricing/" class="link mr-0">
+			<div class="col-12 col-md-6 last-item">
+				<a href="https://wpchill.com/" class="link mr-0 float-right">
 				Download Monitor is a WPChill plugin
 				</a>
 			</div>
