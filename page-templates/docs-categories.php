@@ -17,6 +17,33 @@ $terms = get_terms([
 
 get_header(); ?>
 
+<section data-jarallax="" data-speed=".8" class="pt-10 pb-11 py-md-14 overlay overlay-black overlay-60 jarallax" style="background-image: none; z-index: 0;" data-jarallax-original-styles="background-image: url(assets/img/covers/cover-4.jpg);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+
+            <!-- Heading -->
+            <h1 class="display-2 fw-bold text-white">
+              What Do You Need?
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-white-75 mb-0">
+              We're here to help you better use Download Monitor. First, let's figure out if we have a solution in our documentation.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://landkit.goodthemes.co/assets/img/covers/cover-4.jpg&quot;); position: absolute; top: 0px; left: 0px; width: 100%; height:100%; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: -38.8px; transform: translate3d(0px, 21.36px, 0px);">
+</div>
+</div>
+</section>
+</section>
+<div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x text-light">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>      </div>
+    </div>
 <div class="container">
 
 <?php get_search_form(); ?>
