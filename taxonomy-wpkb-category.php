@@ -13,7 +13,7 @@ get_header(); ?>
 
 <section class="pt-6 pt-md-8 pb-8 mb-md-8  bg-light">
     <div class="container">
-        <div class="row">
+        <div class="row"> 
             <div class="col-12">
                 <div class="row mb-6 mb-md-8 col-md-8">
                     <div class="col-auto">
@@ -28,7 +28,7 @@ get_header(); ?>
                             <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
                             <header class="entry-header"><h2 class="entry-title"><?php echo $term->name; ?></h2></header>
                         </h2>
-                     </div>
+                    </div>
                 </div> 
                 <div class="accordion shadow-light-lg mb-5 mb-md-6 bg-white" id="helpAccordionOne">
                 <?php while ( have_posts() ) : the_post(); ?>
@@ -46,7 +46,6 @@ get_header(); ?>
                     </div>
                     <?php endwhile; // end of the loop. ?>
                 </div>
-               
             </div>
         </div>
     </div>
