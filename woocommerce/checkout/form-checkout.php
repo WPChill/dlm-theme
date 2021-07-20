@@ -29,7 +29,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 $order_button_text = 'Complete your purchase';
 ?>
 <div class="wpchill-checkout-page-header text-center mb-10">
-	<img class="wpchill-checkout-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png' ?>" />
+	<a href="/"><img class="wpchill-checkout-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png' ?>" /></a>
 </div>
 
 <?php woocommerce_checkout_login_form(); ?>
