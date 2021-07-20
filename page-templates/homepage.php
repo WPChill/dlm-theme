@@ -43,10 +43,10 @@
 					<img class="homepage-benefits" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Union.png">         
 				</div>
 				<!-- Heading -->
-				<h3 class="homepage-titles"><?php esc_html_e('Organize.', 'wpchill-theme'); ?></h3>
+				<h3 class="homepage-titles"><?php esc_html_e( 'Organize.', 'wpchill-theme' ); ?></h3>
 				<!-- Text -->
-				<p class="mb-6 mb-md-0 benefits-description">
-				Add, manage, categorise and tag downloadable files using the familiar WordPress UI
+				<p class="mb-10 benefits-description">
+					<?php esc_html_e( 'Add, manage, categorise and tag downloadable files using the familiar WordPress UI', 'wpchill-theme' ); ?>
 				</p>
 			</div>
 
@@ -56,10 +56,10 @@
 					<img class="homepage-benefits" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/scale.png">          
 				</div>
 				<!-- Heading -->
-				<h3 class="homepage-titles"><?php esc_html_e('Track.', 'wpchill-theme'); ?></h3>
+				<h3 class="homepage-titles"><?php esc_html_e( 'Track.', 'wpchill-theme' ); ?></h3>
 				<!-- Text -->
-				<p class="mb-6 mb-md-0 benefits-description">
-				Display download links, track downloads, log access & show file download counts
+				<p class="mb-10 benefits-description">
+					<?php esc_html_e( 'Display download links, track downloads, log access & show file download counts', 'wpchill-theme' ); ?>
 				</p>
 			</div>
 
@@ -69,10 +69,10 @@
 					<img class="homepage-benefits" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/headphones.png">           
 				</div>
 				<!-- Heading -->
-				<h3 class="homepage-titles"><?php esc_html_e('Support.', 'wpchill-theme'); ?></h3>
+				<h3 class="homepage-titles"><?php esc_html_e( 'Support.', 'wpchill-theme' ); ?></h3>
 				<!-- Text -->
-				<p class="mb-6 mb-md-0 benefits-description">
-				Support for adding multiple file versions per download, as well as mirrors
+				<p class="mb-10 benefits-description">
+					<?php esc_html_e( 'Support for adding multiple file versions per download, as well as mirrors', 'wpchill-theme' ); ?>
 				</p>
 			</div>
 		</div>
@@ -108,7 +108,6 @@ $fp_ids   = $fp_query->query( array(
 		<div class="row">
 		<?php foreach ( $fp_ids as $fp_id ) : $fproduct = wc_get_product( $fp_id ); ?>
 			<div class="col-12 col-md-6 col-lg-4 d-flex">
-			
 				<div class="card mb-6 shadow-light-lg lift lift-lg">
 				<a href="<?php echo get_permalink( $fproduct->get_id() ); ?>">
 					<!-- Image -->
