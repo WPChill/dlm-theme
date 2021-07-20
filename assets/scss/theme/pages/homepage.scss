@@ -92,21 +92,14 @@
    
 }
 .interface {
-
-  
     .interface-description {
         font-size: 31px;
         line-height: 143.33%;
         color: rgba(26, 26, 87, 0.9);
     }
-
-    .interface-image {
-        //width: 100%;
-    }
 }
 
 .intuitive {
-
     .intuitive-description {
         font-weight: 500;
         font-size: 19px;
@@ -140,4 +133,16 @@
     font-weight: 900;
     font-size: 31px;
     color: rgba(26, 26, 87, 0.9);
+}
+
+@media only screen and (max-width: 768px) {
+    .benefits {
+        .homepage-titles,
+        .benefits-description {
+            text-align: center;
+        }
+        .text-benefits {
+            margin: 0 auto;
+        }
+    }
 }

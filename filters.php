@@ -18,7 +18,7 @@ function wpchill_main_menu_filter( $items, $args ) {
 	if ( 'primary' === $args->theme_location ) {
 
 		if ( ! is_user_logged_in() ) {
-			$items .= '<li class="nav-link"><a class="login-link" href="' . esc_url( wp_login_url( get_permalink() ) ) . '" rel="nofollow">Log In</a></li>';
+			$items .= '<li class="nav-link"><a class="login-link text-decoration-none" href="' . esc_url( wp_login_url( get_permalink() ) ) . '" rel="nofollow">Log In</a></li>';
 		} else {
 			$items .= '<li class="nav-item dropdown">';
 			$items .= '<a class="nav-link" href="' . get_permalink( get_page_by_path( 'checkout/purchase-history' ) ) . '">My Account</a>';
