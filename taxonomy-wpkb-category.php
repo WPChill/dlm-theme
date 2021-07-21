@@ -33,7 +33,7 @@ get_header(); ?>
                 <div class="accordion shadow-light-lg mb-5 mb-md-6 bg-white" id="helpAccordionOne">
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div class="field">
-                    <a href="<?php the_permalink(); ?>">
+                    <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                         <div class="accordion-item">
                             <div class="me-auto">
                                 <!-- Heading -->
@@ -70,7 +70,7 @@ get_header(); ?>
         <div class="row mt-10">
             <?php foreach ($terms as $term): ?>
             <div class="col-12 col-md-6 col-lg-4">
-                <a href="<?php echo get_term_link($term) ?>">
+                <a class="text-decoration-none" href="<?php echo get_term_link($term) ?>">
                     <div class="card card-border border-primary shadow-lg mb-6 mb-md-8 lift lift-lg">
                         <div class="card-body text-center">
                             <div class="icon-circle bg-primary text-white mb-5">

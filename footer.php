@@ -46,32 +46,18 @@
 		</div>
 	</div>
 </section>
-<section class="pt-5 pb-5 links">
+
+<section class="pt-2 pb-2 links">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-6">
-				<div class="row">
-					<div class="col-12 col-md-4">
-						<a href="/my-account/edit-address/" class="mb-md-0 link">
-						<?php esc_html_e('My account', 'wpchill-theme'); ?>
-						</a>
-					</div>
-					<div class="col-12 col-md-4">
-						<a href="/terms-conditions" class="mb-md-0 link">
-						<?php esc_html_e('Terms & Conditions', 'wpchill-theme'); ?>
-						</a>
-					</div>
-					<div class="col-12 col-md-4">
-						<a href="/privacy-policy" class="mb-md-0 link">
-						<?php esc_html_e('Privacy Policy', 'wpchill-theme'); ?>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-md-6 last-item">
-				<a href="https://wpchill.com/" class="link mr-0 float-right">
-				Download Monitor is a WPChill plugin
-				</a>
+			<div class="col-sm-12 col-md-12">
+				<?php
+				wp_nav_menu( array( 
+					'theme_location' => 'footer-menu',
+					'container'      => '',
+					'items_wrap'     =>'<ul class="navbar-nav link">%3$s</ul>',
+					) );
+				?>
 			</div>
 		</div>
 	</div>

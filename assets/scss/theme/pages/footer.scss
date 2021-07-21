@@ -33,10 +33,23 @@
     font-size: 16px;
     line-height: 24px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.nav-link {
     color: #FFFFFF;
 }
 
-a.link:hover {
+.nav-link:hover {
     color: #FFFFFF;
-  }
+}
+
+@media only screen and (max-width: 768px) {
+    .link{
+        display: flex;
+        flex-direction: column;
+       
+    }
+}

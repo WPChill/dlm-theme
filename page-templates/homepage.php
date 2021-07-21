@@ -15,7 +15,7 @@
 <section class="pb-5">
 	<div class="container col-xxl-12 col-md-12 p-5">
 		<div class="row align-items-center homepage-header">
-			<div class="col-xxl-6 col-md-6 text-md-left mb-xs-3 mb-md-0 ">
+			<div class="col-xxl-6 col-md-6 text-md-left mb-xs-3 mb-md-0 order-sm-1 order-2">
 				<h1 class="lh-1 mb-3 intro"> Introducing </br> Download Monitor</h1>
 				<p  class="mb-4 description"><?php esc_html_e('A WordPress plugin which provides an intuitive UI for uploading and managing downloadable files, inserting download links into posts & logging downloads.', 'wpchill-theme'); ?></p>
 				<div class="pb-5 text-left">
@@ -25,7 +25,7 @@
 					</a>
         		</div>
 			</div>
-			<div class="col-xxl-6 col-md-6 text-right" style="z-index:0;">
+			<div class="col-xxl-6 col-md-6 text-right order-sm-2 order-1" style="z-index:0;">
 				<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/DM2.png">
 			</div>
 		</div>
@@ -155,10 +155,10 @@ $fp_ids   = $fp_query->query( array(
 	<div class="container interface">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-12 col-md-6 order-md-1">
-				<div class="position-relative h-100 vw-50 float-end  d-md-block">
+				<div class="position-relative h-100 vw-50 float-end d-md-block">
 					<div class="position-relative d-md-block aos-init aos-animate">
 						<div class="card">
-							<img class="interface-image" style="width:100%"   src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/interface.png">
+							<img class="interface-image img-responsive" style="width:100%"   src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/interface.png">
 						</div>
 					</div>
 				</div>
@@ -196,11 +196,11 @@ $fp_ids   = $fp_query->query( array(
 <section class="pt-8">
 	<div class="container quick-add">
 		<div class="row align-items-center justify-content-between">
-			<div class="col-12 col-md-6 order-md-2 aos-init aos-animate ">
+			<div class="col-12 col-md-6 order-sm-2 order-1 aos-init aos-animate ">
 				<h2 class="quick-add-title">Quick-Add Panel</h2>
 				<p class="quick-add-description">To make referencing existing downloads, or uploading new ones from posts, Download Monitor adds an ‘Insert Download’ button above your post editor to load the quick-add panel for convenience.</p>
 			</div>
-			<div class="col-12 col-md-6 order-md-1 aos-init aos-animate">
+			<div class="col-12 col-md-6  order-sm-1 order-2  aos-init aos-animate">
 				<div class="card">
 					<img class="options-image-quick-add" style="width:100%"  src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/quick-add.png">
 				</div>
