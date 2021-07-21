@@ -87,11 +87,13 @@ if ( ! function_exists( 'wpchill_base_theme_author' ) ) {
 			echo '<div class="col-auto"></div>';
 		// TO DO - ADD AVATAR!
 			echo '<div class="col ms-n5">';
-				if ($inline) {
+				if ( $inline ) {
+					echo '<div class="d-flex flex-column flex-lg-row justify-content-between">';
 					echo '<span class="text-uppercase">' . get_the_author() . '</span>';
 					echo '<span class="author-description" style="float">';
 					echo '<time class="fs-sm text-muted" datetime="2019-05-20">' . esc_html__('Published on ', 'wpchill-theme') . esc_html( $post_date ) . '</time>';
 					echo '</span>';
+					echo '</div>';
 				} else {
 					echo '<h6 class="text-uppercase mb-0">' . get_the_author() . '</h6>';
 					echo '<div class="author-description">';
@@ -314,7 +316,7 @@ add_action( 'woocommerce_checkout_before_form', 'woocommerce_checkout_payment' )
 add_action('pre_get_posts','wpchill_remove_sticky_posts');
 
 function wpchill_remove_sticky_posts( $query ) {
-	if ( $query->is_main_query() ) {
+	if ( is_home() && $query->is_main_query() ) {
 		$query->set( 'post__not_in', get_option( 'sticky_posts' ) );
 	}
 }
