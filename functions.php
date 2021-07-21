@@ -180,7 +180,7 @@ function woocommerce_template_loop_product_link_open() {
 
 	$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
 
-	echo '<a href="' . esc_url( $link ) . '" class="card-img-top text-decoration-none ">';
+	echo '<a href="' . esc_url( $link ) . '" class="card-img-top text-decoration-none bg-primary text-center">';
 }
 
 function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail', $deprecated1 = 0, $deprecated2 = 0 ) {
@@ -190,7 +190,7 @@ function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail', $de
 
 	$image = '';
 	if ( $product ) {
-		$image .= $product->get_image( $image_size, array( 'class' => 'card-img-top', 'style' => 'height:auto' ) );
+		$image .= $product->get_image( $image_size, array( 'class' => 'card-img-top', 'style' => 'width:auto' ) );
 		$image .= 
 		'<div class="position-relative">
 			<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
@@ -310,6 +310,14 @@ add_action( 'woocommerce_checkout_order_review', function() {
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 add_action( 'woocommerce_checkout_before_form', 'woocommerce_checkout_payment' );
+
+add_action('pre_get_posts','wpchill_remove_sticky_posts');
+
+function wpchill_remove_sticky_posts( $query ) {
+	if ( $query->is_main_query() ) {
+		$query->set( 'post__not_in', get_option( 'sticky_posts' ) );
+	}
+}
 
 /**
  * Redirect the user to our custom login page

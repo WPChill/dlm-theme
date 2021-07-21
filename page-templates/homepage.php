@@ -109,9 +109,9 @@ $fp_ids   = $fp_query->query( array(
 		<?php foreach ( $fp_ids as $fp_id ) : $fproduct = wc_get_product( $fp_id ); ?>
 			<div class="col-12 col-md-6 col-lg-4 d-flex">
 				<div class="card mb-6 shadow-light-lg lift lift-lg">
-				<a href="<?php echo get_permalink( $fproduct->get_id() ); ?>">
+				<a href="<?php echo get_permalink( $fproduct->get_id() ); ?>" class="bg-primary text-center">
 					<!-- Image -->
-					<?php echo get_the_post_thumbnail( $fproduct->get_id(), 'shop_catalog', array('class' => 'card-img-top', 'style' => 'height:auto') ); ?>
+					<?php echo get_the_post_thumbnail( $fproduct->get_id(), 'shop_catalog', array('class' => 'card-img-top', 'style' => 'width:auto') ); ?>
 					<div class="position-relative">
 						<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
 							<svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>

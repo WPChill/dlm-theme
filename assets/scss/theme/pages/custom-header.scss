@@ -13,11 +13,17 @@
         }
     }
 
-    .nav-link:hover,
-    .nav-link a:hover {
-        color: #3CA6D3;
-    }
+    .nav-link {
+        &:hover,
+        a:hover {
+            color: #3CA6D3;
+        }
 
+        @media only screen and (min-width: 991px ) {
+            padding-right: 0;
+            padding-left: 3rem;
+        }
+    }
     .my-account-menu-link ul {
         @media only screen and (max-width: 991px ) {
             padding: 1rem;

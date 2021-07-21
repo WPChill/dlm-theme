@@ -32,12 +32,12 @@ get_header( 'shop' );
 <header class="woocommerce-products-header">
 	<section class="extensions-header pt-4 pt-md-11 bg-primary">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-12 col-md-7 col-lg-6 order-md-1 page-title-container">
-					<h1 class="display-4 text-left text-white woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+				<div class="d-flex flex-column flex-lg-row justify-content-between">
+					<div class="col-12 col-md-7 col-lg-6 order-md-1 page-title-container align-items-center">
+						<h1 class="display-4 text-left text-white woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 						<p class="lead text-left text-md-start mb-6 mb-lg-8"><?php esc_html_e( 'Extend the core Download Monitor plugin with it’s powerful extensions. All extensions come with one year of updates and support', 'wpchill-theme' ) ?></p>
 					</div>
-					<div class="col-12 col-md-4 col-lg-4 offset-md-1 order-md-2 text-center bundle-container">
+					<div class="col-12 col-md-4 col-lg-4 order-md-2 text-center bundle-container align-items-center">
 						<div class="p-8">
 							<div class="icon text-primary mb-3">
 								<img width="50" height="45" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/box.png">
