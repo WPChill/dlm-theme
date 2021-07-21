@@ -7,9 +7,7 @@
 
 ?>
 <section class="pt-6 pt-md-8 <?php echo ( is_checkout() ? 'col-md-8 mx-auto' : '' ); ?>">
-	<div class="container">
-		<?php the_content(); ?>
-	</div>
+	<?php the_content(); ?>
 </section>
 
 <?php if ( is_checkout() ) : ?>

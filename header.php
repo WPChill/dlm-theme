@@ -87,7 +87,7 @@
 	<?php if ( is_account_page() && is_user_logged_in() ): $current_user = wp_get_current_user(); ?>
 		<header class="bg-primary pt-9 pb-11 d-none d-md-block">
 			<div class="container-md">
-				<div class="row align-items-center m-2">
+				<div class="row align-items-center">
 				<div class="col">
 
 					<!-- Heading -->
@@ -95,14 +95,14 @@
 
 					<!-- Text -->
 					<p class="fs-lg text-white-75 mb-0">
-					<?php esc_html_e( 'Settings for', 'wpchill-theme' ) ?> <a class="text-reset" href="mailto:<?php echo $current_user->user_email ?>"><?php echo $current_user->user_email ?></a>
+					<?php esc_html_e( 'Settings for', 'wpchill-theme' ); ?> <a class="text-reset" href="mailto:<?php echo $current_user->user_email ?>"><?php echo $current_user->user_email ?></a>
 					</p>
 
 				</div>
 				<div class="col-auto">
 
 					<!-- Button -->
-					<a href="<?php echo wp_logout_url(); ?>" class="btn btn-sm btn-gray-300-20"><?php esc_html_e( 'Log out', 'wpchill-theme' ) ?></a>
+					<a href="<?php echo wp_logout_url(); ?>" class="btn btn-sm btn-gray-300-20"><?php esc_html_e( 'Log out', 'wpchill-theme' ); ?></a>
 
 				</div>
 				</div> <!-- / .row -->
