@@ -32,7 +32,7 @@ get_header(); ?>
                 </div> 
                 <div class="accordion shadow-light-lg mb-5 mb-md-6 bg-white" id="helpAccordionOne">
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <div class="field">
+                    <div class="field border border-light">
                     <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                         <div class="accordion-item">
                             <div class="me-auto">

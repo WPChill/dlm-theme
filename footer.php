@@ -50,14 +50,19 @@
 <section class="pt-2 pb-2 links">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-12">
+			<div class="col-12 col-md-4 fw-500">
 				<?php
 				wp_nav_menu( array( 
 					'theme_location' => 'footer-menu',
 					'container'      => '',
-					'items_wrap'     =>'<ul class="navbar-nav link">%3$s</ul>',
+					'items_wrap'     =>'<ul class="navbar-nav link d-flex flex-column  flex-lg-row justify-content-between">%3$s</ul>',
 					) );
 				?>
+			</div>
+			<div class="col-12 col-md-8 last-item">
+				<a href="https://wpchill.com/" class="link mr-0 mt-2 float-right text-white">
+				<?php esc_html_e('Download Monitor is a WPChill plugin', 'wpchill-theme' ); ?>
+				</a>
 			</div>
 		</div>
 	</div>
