@@ -9,9 +9,16 @@
 * Template Name: Docs Cat Template
 */
 
-get_header(); ?>
+$terms = get_terms([
+    'taxonomy' => 'wpkb-category',
+    'hide_empty' => false,
+    'number' => 3,
+    'parent' => 0
+]);
 
-<section class="pt-6 pt-md-8 pb-8 mb-md-8  bg-light">
+get_header(); ?>
+<body id="category">
+<section class="pt-6 pt-md-11 pb-8 mb-md-8">
     <div class="container">
         <div class="row"> 
             <div class="col-12">
@@ -58,15 +65,6 @@ get_header(); ?>
         <p class="text-muted mb-6 mb-md-8">
             If you didn’t find what you needed, these could help!
         </p>
-        <?php
-            $terms = get_terms([
-            'taxonomy' => 'wpkb-category',
-            'hide_empty' => false,
-            'number' => 3,
-            'parent' => 0
-        ]);
-        ?>
-
         <div class="row mt-10">
             <?php foreach ($terms as $term): ?>
             <div class="col-12 col-md-6 col-lg-4">

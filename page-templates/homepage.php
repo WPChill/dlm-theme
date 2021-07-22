@@ -151,14 +151,14 @@ $fp_ids   = $fp_query->query( array(
 </section>
 
 <!--Interfaces -->
-<section class="">
+<section class="pt-5">
 	<div class="container interface">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-12 col-md-6 order-md-1">
-				<div class="position-relative h-100 vw-50 float-end d-md-block">
+				<div class="position-relative vw-md-50 float-end d-block">
 					<div class="position-relative d-md-block aos-init aos-animate">
 						<div class="card">
-							<img class="interface-image img-responsive" style="width:100%"   src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/interface.png">
+							<img class="interface-image img-fluid"   src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/interface.png">
 						</div>
 					</div>
 				</div>
@@ -195,12 +195,12 @@ $fp_ids   = $fp_query->query( array(
 
 <section class="pt-8">
 	<div class="container quick-add">
-		<div class="row align-items-center justify-content-between">
-			<div class="col-12 col-md-6 order-sm-2 order-1 aos-init aos-animate ">
+		<div class="row row-quick-add align-items-center justify-content-between">
+			<div class="col-12 col-md-6 aos-init aos-animate ">
 				<h2 class="quick-add-title">Quick-Add Panel</h2>
 				<p class="quick-add-description">To make referencing existing downloads, or uploading new ones from posts, Download Monitor adds an ‘Insert Download’ button above your post editor to load the quick-add panel for convenience.</p>
 			</div>
-			<div class="col-12 col-md-6  order-sm-1 order-2  aos-init aos-animate">
+			<div class="col-12 col-md-6 aos-init aos-animate">
 				<div class="card">
 					<img class="options-image-quick-add" style="width:100%"  src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/quick-add.png">
 				</div>
