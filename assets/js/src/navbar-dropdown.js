@@ -57,17 +57,19 @@ function hideDrop(e, menu) {
 drops.forEach(function(dropdown) {
   const menu = dropdown.querySelector('.dropdown-menu');
 
-  // Show drop
-  showEvents.forEach(function(event) {
-    dropdown.addEventListener(event, function() {
-      showDrop(menu);
+  if (menu) {
+    // Show drop
+    showEvents.forEach(function(event) {
+      dropdown.addEventListener(event, function() {
+        showDrop(menu);
+      });
     });
-  });
 
-  // Hide drop
-  hideEvents.forEach(function(event) {
-    dropdown.addEventListener(event, function(e) {
-      hideDrop(e, menu);
+    // Hide drop
+    hideEvents.forEach(function(event) {
+      dropdown.addEventListener(event, function(e) {
+        hideDrop(e, menu);
+      });
     });
-  });
+  }
 });

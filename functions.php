@@ -5,6 +5,8 @@
  * @package wpchill-theme
  */
 
+define('DLM_BUNDLE_ID', 644);
+
 ?>
 
 <?php

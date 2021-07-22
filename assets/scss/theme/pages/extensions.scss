@@ -2,8 +2,6 @@
     position: relative;
     font-style: normal;
     height: 624px;
-    border-bottom-left-radius: 1025px 50px;
-    border-bottom-right-radius: 1025px 50px;
 
     .page-title-container h1 {
         font-weight: 900;
@@ -18,11 +16,6 @@
         font-size: 21px;
         line-height: 32px;
         color: rgba(255, 255, 255, 0.7);
-    }
-
-    .bundle-container {
-        border: 3px solid #FFFFFF;
-        border-radius: 5px;
     }
 
     .bundle-price {
@@ -44,6 +37,7 @@
         position: absolute;
         bottom: -10%;
         left: 47%;
+        z-index: 9;
         img {
             display: block;
             margin: 0 auto;
@@ -63,9 +57,12 @@
     }
 
     .woocommerce-ordering {
-        position: absolute;
-        top: 0;
-        right: 0;
+        float: none !important;
+        @media only screen and (min-width: 991px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
 
         .orderby {
             margin-right: 1.25rem;

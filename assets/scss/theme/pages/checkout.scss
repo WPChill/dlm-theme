@@ -219,6 +219,23 @@
             overflow: visible;
             clear: none;
         }
+
+        .select2-container--default {
+            .select2-selection--single {
+                border: none;
+                border-bottom: 1px solid #f1f4f8;
+                border-radius: 0;
+                color: #91A3BE;
+                height: 50px;
+            }
+            .select2-selection__rendered {
+                padding: 0;
+                line-height: 50px; 
+            }
+            .select2-selection__arrow b {
+                top: 100%;
+            }
+        }
     }
     
     .woocommerce-form-login {

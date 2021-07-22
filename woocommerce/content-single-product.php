@@ -24,13 +24,13 @@ wp_enqueue_script( 'wc-add-to-cart-variation' );
 global $product;
 
 //$available_variations
-
 $variable = false;
 
 // defaults
 $available_variations = array();
 $attributes = array();
 $selected_attributes = array();
+$bundle = false;
 
 if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->get_type() ) {
 	$variable = true;
@@ -39,6 +39,10 @@ if ( 'variable' == $product->get_type() || 'variable-subscription' == $product->
 	$attributes           = $product->get_variation_attributes();
 //	$selected_attributes  = $product->get_variation_default_attributes();
 	$selected_attributes  = $product->get_default_attributes();
+}
+
+if ($product->get_id() == DLM_BUNDLE_ID) {
+	$bundle = true;
 }
 
 /**
@@ -79,14 +83,14 @@ if ( post_password_required() ) {
 		<div class="extension-short-description mb-7"><?php esc_html_e( the_excerpt() ); ?></div>
 		<div class="row extension-details-container">
 			<div class="wpchill-extension-detail-info col-12 col-md-12 col-lg-4 order-md-2 pb-6">
-				<div class="wpchill-extension-info-box wpchill-extension-info-box-bundle bg-primary text-white text-center p-8">
+				<div class="wpchill-extension-info-box wpchill-extension-info-box-bundle bg-primary text-white text-center p-8" style="display: <?php echo ( !$bundle ? 'block' : 'none' ) ?>">
 					<span><img class="icon mb-4" width="35" height="30" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/buy.png" /></span>
 					<h3 class='purchase-extension-title'><?php esc_html_e('Purchase Extension', 'wpchill-theme'); ?></h3>
 					<p class='purchase-extension-description mb-0'><?php esc_html_e( 'Get all of our extensions, save money, and keep your files organized.', 'wpchill-theme' ); ?></p><br>
 					<a href="/pricing" class="bundle-button btn btn-primary mb-2 wpchill-purchase-sidebar-button"><?php esc_html_e( 'BUNDLE & SAVE', 'wpchill-theme' ); ?></a><br>
 					<span>...<?php esc_html_e( 'or,', 'wpchill-theme' ); ?> <a href="#" id="extension-only" class="text-white"><?php esc_html_e( 'just purchase this extension', 'wpchill-theme' ); ?></a>.</span>
 				</div>
-				<div class="wpchill-extension-info-box wpchill-extension-info-box-license bg-primary text-white p-8" style="display:none">
+				<div class="wpchill-extension-info-box wpchill-extension-info-box-license bg-primary text-white p-8" style="display: <?php echo ( $bundle ? 'block' : 'none' ) ?>">
 					<?php
 					if ( $variable ) {
 						$license_label = 'License';
@@ -176,7 +180,7 @@ if ( post_password_required() ) {
 					} else {
 						?>
 
-						<p class="license-free">FREE</p>
+						<p class="license-free"><?php esc_html_e('FREE', 'wpchill-theme') ?></p>
 
 						<form class="cart" method="post" enctype='multipart/form-data'>
 							<p class="license-add-to-cart">
@@ -189,7 +193,7 @@ if ( post_password_required() ) {
 
 						<?php
 					}
-					?><p class="license-copy">Licenses are yearly subscriptions, you can cancel at any time.</p>
+					?><p class="license-copy"><?php esc_html_e('Licenses are yearly subscriptions, you can cancel at any time.') ?></p>
 				</div>
 
 				<div class="text-center mt-4">
