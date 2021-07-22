@@ -118,6 +118,10 @@
   
 }
 
+.row-quick-add {
+    flex-direction: row-reverse;
+}
+
 .versioning {
     .versioning-description {
         width: 100%;
@@ -145,4 +149,11 @@
             margin: 0 auto;
         }
     }
+
+    .row-quick-add {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+  
 }
