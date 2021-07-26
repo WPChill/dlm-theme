@@ -45,11 +45,11 @@ get_header(); ?>
 
 <main class="pb-10 mt-md-n8">
 	<div class="container">
-		<div class="row">
-			<div class="col-12 p-0">
-				<?php get_search_form(); ?>
-			</div>
-    </div>
+		
+      <?php echo do_shortcode('[wpkb_search]');?>
+  
+
+
   </div>
 </main>
 
