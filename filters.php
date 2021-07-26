@@ -23,15 +23,15 @@ function wpchill_main_menu_filter( $items, $args ) {
 			$items .= '<li class="nav-item dropdown my-account-menu-link">';
 			$items .= '<a class="nav-link" href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '">My Account</a>';
 			$items .= '<ul class="dropdown-menu">';
-			$items .= '<li class="dropdown-item "><a class="dropdown-item" href="' . get_permalink( get_page_by_path( 'checkout/purchase-history' ) ) . '">Purchase
+			$items .= '<li class="dropdown-item "><a class="dropdown-item" href="' . get_permalink( get_page_by_path( 'my-account' ) ) . 'orders">Purchase
                                 History</a></li>';
 			$items .= '<li class="dropdown-item"><a class="dropdown-item"
                                 href="' . get_permalink( get_page_by_path( 'my-account' ) ) . 'subscriptions">Subscriptions</a></li>';
 			$items .= '<li class="dropdown-item"><a class="dropdown-item"
-                                href="' . get_permalink( get_page_by_path( 'my-account' ) ) . 'account-information">Account
+                                href="' . get_permalink( get_page_by_path( 'my-account' ) ) . 'edit-account">Account
                                 Information</a></li>';
 			$items .= '<li class="dropdown-item"><a class="dropdown-item"
-                                href="' . get_permalink( get_page_by_path( 'my-account' ) ) . 'download-history">Download History</a>
+                                href="' . get_permalink( get_page_by_path( 'my-account' ) ) . 'downloads">Download History</a>
                         </li>';
 
 			$items .= '<li class="dropdown-item"><a class="dropdown-item" href="' . wp_logout_url( home_url() ) . '">Log Out</a></li>';

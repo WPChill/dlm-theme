@@ -87,7 +87,7 @@ if ( post_password_required() ) {
 					<span><img class="icon mb-4" width="35" height="30" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/buy.png" /></span>
 					<h3 class='purchase-extension-title'><?php esc_html_e('Purchase Extension', 'wpchill-theme'); ?></h3>
 					<p class='purchase-extension-description mb-0'><?php esc_html_e( 'Get all of our extensions, save money, and keep your files organized.', 'wpchill-theme' ); ?></p><br>
-					<a href="/pricing" class="bundle-button btn btn-primary mb-2 wpchill-purchase-sidebar-button"><?php esc_html_e( 'BUNDLE & SAVE', 'wpchill-theme' ); ?></a><br>
+					<a href="/extensions/extension-bundle/" class="bundle-button btn btn-primary mb-2 wpchill-purchase-sidebar-button"><?php esc_html_e( 'BUNDLE & SAVE', 'wpchill-theme' ); ?></a><br>
 					<span>...<?php esc_html_e( 'or,', 'wpchill-theme' ); ?> <a href="#" id="extension-only" class="text-white"><?php esc_html_e( 'just purchase this extension', 'wpchill-theme' ); ?></a>.</span>
 				</div>
 				<div class="wpchill-extension-info-box wpchill-extension-info-box-license bg-primary text-white p-8" style="display: <?php echo ( $bundle ? 'block' : 'none' ) ?>">
