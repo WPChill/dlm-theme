@@ -1,4 +1,47 @@
 
-    input.wpkb-search-button{
-        color: red;
+.search p {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: .375rem;
+    padding: 10px;
+    box-shadow: 0 .5rem 1.5rem rgba(22,28,45,.1);
+    background-color: #fff;
+
+    .wpkb-search-input, .wpkb-search-term {
+        flex: 1 1 auto;
+        min-width: 0;
+        position: relative;
+        appearance: none;
+        background-clip: padding-box;
+        background-color: #fff;
+        box-shadow: none;
+        color: #161c2d;
+        display: block;
+        border: none;
+
+        .wpkb-search-term:focus-visible {
+            outline: none;
+        }
+
+        .wpkb-search-term {
+            width: 100%;
+            padding: 10px;
+        }
     }
+
+}
+
+form span.wpkb-search-button > input[type=submit] {
+    background-color: #1d69a6;
+    color: #fff;
+    border-radius: .375rem;
+    border-color: transparent;
+    padding: 10px 15px;
+}
+
+.wpkb-search-results > p {
+    display: flex;
+    flex-direction: column;
+}

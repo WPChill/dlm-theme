@@ -44,12 +44,8 @@ get_header(); ?>
 </div>
 
 <main class="pb-10 mt-md-n8">
-	<div class="container">
-		
+	<div class="container search">	
       <?php echo do_shortcode('[wpkb_search]');?>
-  
-
-
   </div>
 </main>
 
