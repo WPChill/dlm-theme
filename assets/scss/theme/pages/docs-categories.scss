@@ -38,10 +38,34 @@ form span.wpkb-search-button > input[type=submit] {
     color: #fff;
     border-radius: .375rem;
     border-color: transparent;
-    padding: 10px 15px;
+    padding: 8px 15px;
 }
 
 .wpkb-search-results > p {
     display: flex;
     flex-direction: column;
+    margin: 0;
+
+    a {
+        font-size: 17px;
+        color: #161c2d;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+.wpkb-search-results > p {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.wpkb-search-results > p > a {
+    border-top: 1px solid #f1f4f8;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+.wpkb-search-results > p > a:nth-child(1) {
+    border: none;
 }

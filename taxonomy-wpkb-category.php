@@ -9,11 +9,18 @@
 * Template Name: Docs Cat Template
 */
 
+$current_tax_ids = array();
+$current_tax = get_the_terms( $post->ID, 'wpkb-category' );
+foreach( $current_tax as $tax ) {
+    $current_tax_ids[] = $tax->term_id;
+}
+
 $terms = get_terms([
     'taxonomy' => 'wpkb-category',
     'hide_empty' => false,
     'number' => 3,
-    'parent' => 0
+    'parent' => 0,
+    'exclude' => $current_tax_ids // exclude the terms
 ]);
 
 get_header(); ?>
@@ -44,9 +51,9 @@ get_header(); ?>
                         <div class="accordion-item">
                             <div class="me-auto">
                                 <!-- Heading -->
-                                <h4 class="fw-bold mb-0 p-6 text-black">
+                                <p class="fw-bold mb-0 p-6 text-black subcategory">
                                    <?php the_title(); ?>
-                                </h4>
+                                </p>
                             </div>
                         </div>
                         </a>
