@@ -16,8 +16,8 @@ $sticky = new WP_Query( array( 'post__in' => get_option( 'sticky_posts' ) ) );
 
 			<?php
 			if ( $sticky->have_posts() ) {
-				while ( $sticky->have_posts() ) {
-					$sticky->the_post();
+				 while ( $sticky->have_posts() ) {
+				 	$sticky->the_post();
 					get_template_part( 'template-parts/element', 'post-excerpt-card-featured' );
 				}
 			}

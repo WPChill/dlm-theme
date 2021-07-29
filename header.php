@@ -24,7 +24,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body data-aos-easing="ease-out-quad" data-aos-duration="700" data-aos-delay="0" class="<?php echo ( is_checkout() ? 'checkout-template' : '' ); ?>">
+<body <?php if ( is_checkout() ) { body_class( 'checkout-template' ); }else { body_class(); } ?> data-aos-easing="ease-out-quad" data-aos-duration="700" data-aos-delay="0" >
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-white">
