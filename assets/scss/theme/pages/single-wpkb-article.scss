@@ -1,3 +1,20 @@
-body#article {
+body {
+  &#article {
     background-color: #f9fbfd;
+  }
+
+  &.single-wpkb-article {
+    .sidebar.card {
+      ul {
+        li {
+          padding: 1rem 0;
+          border-bottom: 1px solid rgb(241, 244, 248);
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 }

@@ -12,19 +12,18 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-12 col-md-3">
 					<div class="sidebar card shadow-light-lg">
-						<h4 class="m-5">Categories</h4>
-						<?php foreach ( $terms as $term ): $count ++ ?>
-							<a href="<?php echo get_term_link( $term ) ?>">
-								<ul class="list-unstyled ms-5">
-									<li class=" text-gray-800">
-										<?php echo $term->name; ?>
-										<?php if ( $count != count( $terms ) ): ?>
-											<hr class="border-gray">
-										<?php endif; ?>
+						<?php if ( count( $terms ) ) { ?>
+							<h4 class="m-5">Categories</h4>
+							<ul class="list-unstyled ms-5">
+								<?php foreach ( $terms as $term ): $count ++ ?>
+									<li>
+										<a href="<?php echo get_term_link( $term ) ?>"  class="text-gray-800">
+											<?php echo esc_html( $term->name ); ?>
+										</a>
 									</li>
-								</ul>
-							</a>
-						<?php endforeach ?>
+								<?php endforeach ?>
+							</ul>
+						<?php } ?>
 					</div>
 				</div>
 				<div class="col-12 col-md-8">
