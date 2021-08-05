@@ -8,29 +8,27 @@
 ?>
 
 <div class="col-12 col-md-6 col-lg-4 d-flex">
-
 	<!-- Card -->
 	<div class="card mb-6 shadow-light-lg lift lift-lg df-jc-sb">
-
-	<?php if ( has_post_thumbnail() ) : ?>
-	<!-- Image -->
-		<a class="card-img-top" href="<?php echo esc_url( get_permalink() ); ?>">
-
+		<?php if ( has_post_thumbnail() ) : ?>
 			<!-- Image -->
-			<img src="<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>" alt="..." class="card-img-top">
+			<a class="card-img-top" href="<?php echo esc_url( get_permalink() ); ?>">
 
-			<!-- Shape -->
-			<div class="position-relative">
-				<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-					<svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"></path>
-					</svg>
+				<!-- Image -->
+				<img src="<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>" alt="..." class="card-img-top">
+
+				<!-- Shape -->
+				<div class="position-relative">
+					<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+						<svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								  d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"></path>
+						</svg>
+					</div>
 				</div>
-			</div>
 
-		</a>
-	<?php endif; ?>
+			</a>
+		<?php endif; ?>
 		<!-- Body -->
 		<a class="card-body" href="<?php echo esc_url( get_permalink() ); ?>">
 
@@ -45,11 +43,7 @@
 			</p>
 
 		</a>
-
 		<!-- Meta -->
-
 		<?php wpchill_base_theme_author(); ?>
-
 	</div>
-
 </div>

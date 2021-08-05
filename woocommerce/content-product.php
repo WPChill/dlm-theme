@@ -74,4 +74,5 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			</div>
 		</div>
 	</div>
-</div>
+<!--@todo: Delete commented line after testing-->
+<!--</div>-->

@@ -44,32 +44,25 @@ Template Name: My Account
 <main class="pb-8 pb-md-11 mt-md-n6">
 	<div class="container-md">
 		<div class="row">
-
 			<div class="col-12 col-md-3">
-
 				<!-- Card -->
 				<div class="card card-bleed border-bottom border-bottom-md-0 shadow-light-lg">
-
 					<!-- Collapse -->
 					<div class="collapse d-md-block" id="sidenavCollapse">
 						<div class="card-body">
-
 							<?php
 							wp_nav_menu(
-								[
-									'theme_location' => 'my-account',
-									'menu_id'        => '',
-									'container'      => '',
-									'items_wrap'     => '<ul class="card-list list text-gray-700 mb-6">%3$s</ul>',
-								]
+									[
+											'theme_location' => 'my-account',
+											'menu_id'        => '',
+											'container'      => '',
+											'items_wrap'     => '<ul class="card-list list text-gray-700 mb-6">%3$s</ul>',
+									]
 							);
 							?>
-
 						</div>
 					</div>
-
 				</div>
-
 			</div>
 
 			<div class="col-12 col-md-9">
@@ -77,7 +70,6 @@ Template Name: My Account
 					<div class="card-header">
 						<div class="row align-items-center">
 							<div class="col">
-
 								<!-- Heading -->
 								<h4 class="mb-0">
 									<?php the_title(); ?>
@@ -87,14 +79,12 @@ Template Name: My Account
 						</div>
 					</div>
 					<div class="card-body">
-
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : ?>
-							<?php the_post(); ?>
-							<?php the_content(); ?>
-						<?php endwhile; ?>
-					<?php endif; ?>
-
+						<?php if ( have_posts() ) : ?>
+							<?php while ( have_posts() ) : ?>
+								<?php the_post(); ?>
+								<?php the_content(); ?>
+							<?php endwhile; ?>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

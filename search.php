@@ -13,8 +13,7 @@
 		<div class="row">
 			<?php
 			if ( have_posts() ) :
-				?>
-				<?php
+
 				while ( have_posts() ) :
 					the_post();
 					/* Make sure the template is your content.php */
@@ -24,21 +23,15 @@
 
 				the_posts_navigation();
 
+
+			else :
+				/* Show no content found page */
 				?>
-
-					<?php
-
-					else :
-						/* Show no content found page */
-						?>
-						<div class="row">
-						<p> <?php echo esc_html__( 'No Posts Found', 'wpchill-theme' ); ?></p>
-						</div>
-						<?php
-
-					endif;
-					?>
-			</div>
+				<div class="row">
+					<p> <?php echo esc_html__( 'No Posts Found', 'wpchill-theme' ); ?></p>
+				</div>
+			<?php endif; ?>
+		</div>
 	</div>
 </div>
 

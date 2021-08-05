@@ -34,21 +34,21 @@
 			if ( function_exists( 'the_custom_logo' ) ) {
 				if ( has_custom_logo() ) {
 					?>
-			<a class="navbar-brand" href="<?php echo esc_url( get_home_url() ); ?>">
-					<?php
+					<a class="navbar-brand" href="<?php echo esc_url( get_home_url() ); ?>">
+						<?php
 						$custom_logo_id = get_theme_mod( 'custom_logo' );
 						$src            = wp_get_attachment_image_src( $custom_logo_id );
 
-					?>
-				<img src="<?php echo esc_attr( $src[0] ); ?>" class="navbar-brand-img" alt="Logo">
-			</a>
-			<?php } else { ?>
-				<h1 class="site-title" >
-					<a href="<?php echo esc_attr( get_home_url() ); ?>"><?php echo esc_html( get_option( 'blogname', 'wpchill-theme' ) ); ?></a>
-				</h1>
+						?>
+						<img src="<?php echo esc_url( $src[0] ); ?>" class="navbar-brand-img" alt="Logo">
+					</a>
+				<?php } else { ?>
+					<h1 class="site-title">
+						<a href="<?php echo esc_url( get_home_url() ); ?>"><?php echo esc_html( get_option( 'blogname', 'wpchill-theme' ) ); ?></a>
+					</h1>
 
 					<?php
-			}
+				}
 			}
 			?>
 			<!-- Toggler -->
