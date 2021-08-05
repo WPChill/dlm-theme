@@ -10,7 +10,7 @@ define('DLM_BUNDLE_ID', 644);
 ?>
 
 <?php
-require_once get_template_directory() . '/filters.php';
+require_once __DIR__ . '/filters.php';
 
 /**
  * Theme support
