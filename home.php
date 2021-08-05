@@ -6,7 +6,6 @@
  */
 
 get_header();
-$sticky = new WP_Query( array( 'post__in' => get_option( 'sticky_posts' ) ) );
 ?>
 <?php get_search_form(); ?>
 <?php wpchill_base_theme_categories() ?>
@@ -15,17 +14,18 @@ $sticky = new WP_Query( array( 'post__in' => get_option( 'sticky_posts' ) ) );
 		<div class="row">
 
 			<?php
-			if ( $sticky->have_posts() ) {
-				 while ( $sticky->have_posts() ) {
-				 	$sticky->the_post();
-					get_template_part( 'template-parts/element', 'post-excerpt-card-featured' );
-				}
-			}
-			
+
 			if ( have_posts() ) {
-				while ( have_posts() ) {
+				while ( have_posts() ){
 					the_post();
-					get_template_part( 'template-parts/element', 'post-excerpt-card' );
+
+					// Check if sticky or not
+					if ( is_sticky( get_the_ID() ) ) {
+						get_template_part( 'template-parts/element', 'post-excerpt-card-featured' );
+					} else {
+						get_template_part( 'template-parts/element', 'post-excerpt-card' );
+					}
+
 				}
 			}
 			?>
