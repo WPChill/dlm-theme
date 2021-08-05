@@ -9,19 +9,17 @@
 * Template Name: Docs Cat Template
 */
 
-$current_tax_ids = array();
-$current_tax = get_the_terms( $post->ID, 'wpkb-category' );
-foreach( $current_tax as $tax ) {
-    $current_tax_ids[] = $tax->term_id;
-}
+$current_term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 
-$terms = get_terms([
-    'taxonomy' => 'wpkb-category',
-    'hide_empty' => false,
-    'number' => 3,
-    'parent' => 0,
-    'exclude' => $current_tax_ids // exclude the terms
-]);
+$terms = get_terms(
+		array(
+				'taxonomy'   => 'wpkb-category',
+				'hide_empty' => false,
+				'number'     => 3,
+				'parent'     => 0,
+				'exclude'    => $current_term->term_id // exclude the terms
+		)
+);
 
 get_header(); ?>
 <body id="category">
@@ -36,13 +34,14 @@ get_header(); ?>
                             <i class="fe fe-users"></i>
                         </div>
                     </div>
-                    <div class="col ms-n4">
-                        <!-- Heading -->
-                        <h2 class="fw-bold mb-0">
-                            <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
-                            <header class="entry-header"><h2 class="entry-title"><?php echo $term->name; ?></h2></header>
-                        </h2>
-                    </div>
+					<div class="col ms-n4">
+						<!-- Heading -->
+						<header class="entry-header">
+							<h2 class="entry-title">
+								<?php echo esc_html( $current_term->name ); ?>
+							</h2>
+						</header>
+					</div>
                 </div> 
                 <div class="accordion shadow-light-lg mb-5 mb-md-6 bg-white" id="helpAccordionOne">
                 <?php while ( have_posts() ) : the_post(); ?>
