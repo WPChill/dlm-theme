@@ -74,5 +74,4 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			</div>
 		</div>
 	</div>
-<!--@todo: Delete commented line after testing-->
-<!--</div>-->
+</div><!-- close div required because of starting one in woocommerce/loop/price.php -->
